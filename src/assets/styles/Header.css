@@ -1,0 +1,54 @@
+.header__contents {
+    display: flex;
+    font-size: 0.6rem;
+    /* background-color: seagreen; */
+    margin: 0 4%;
+    height: 1.6rem;
+    justify-content: space-between;
+}
+
+.content__left {
+    display: flex;
+}
+
+.header__logo > img {
+    height: 100%;
+}
+
+.flex-need {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__logo {
+    /* background-color: green; */
+    padding: 0.1rem;
+    cursor: pointer;
+}
+
+.routeOptions {
+    display: flex;
+}
+
+.routeOptions > li {
+    list-style: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* .user__action {
+    background-color: green;
+} */
+
+.user__action > button {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    font-size: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border: 0.01rem solid grey;
+    color: black;
+    background-color: white;
+    border-radius: 0.18rem;
+    font-weight: bold;
+}

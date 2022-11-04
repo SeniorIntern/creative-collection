@@ -1,0 +1,12 @@
+.app__container {
+    margin: 2%;
+    /* background-color: rgb(212, 199, 199); */
+}
+
+html {
+    font-size: 3.2vmax;
+}
+
+.app {
+    color: black;
+}

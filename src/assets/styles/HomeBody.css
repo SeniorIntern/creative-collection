@@ -1,0 +1,38 @@
+.column__two > h2 {
+    text-align: center;
+}
+
+.homeBody {
+    height: 100vh;
+}
+
+.container {
+    height: 75vh;
+}
+
+img {
+    height: 100%;
+}
+
+.rows {
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.left__row > p {
+    font-size: 0.5rem;
+    color: rgb(98, 94, 94);
+}
+
+.left__row {
+    flex: 60%;
+}
+
+.left__row > h3 {
+    margin: 0;
+}
+.right__row {
+    flex: 40%;
+    margin-left: 1rem;
+}
