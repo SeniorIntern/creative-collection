@@ -1,67 +1,64 @@
-.HeroContainer {
-    background: rgb(245, 153, 153);
-    background: -moz-linear-gradient(
-        122deg,
-        rgba(245, 153, 153, 1) 35%,
-        rgba(255, 241, 114, 1) 65%
-    );
-    background: -webkit-linear-gradient(
-        122deg,
-        rgba(245, 153, 153, 1) 35%,
-        rgba(255, 241, 114, 1) 65%
-    );
-    background: linear-gradient(
-        122deg,
-        rgba(245, 153, 153, 1) 35%,
-        rgba(255, 241, 114, 1) 65%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59999",endColorstr="#fff172",GradientType=1);
-    border-radius: 1rem;
-    border-bottom-right-radius: 6rem;
-    margin-bottom: 1.2rem;
+.heroContainer {
+  color: white;
+  background: rgb(245, 153, 153);
+  background: -moz-linear-gradient(
+    122deg,
+    rgba(245, 153, 153, 1) 35%,
+    rgba(255, 241, 114, 1) 65%
+  );
+  background: -webkit-linear-gradient(
+    122deg,
+    rgba(245, 153, 153, 1) 35%,
+    rgba(255, 241, 114, 1) 65%
+  );
+  background: linear-gradient(
+    122deg,
+    rgba(245, 153, 153, 1) 35%,
+    rgba(255, 241, 114, 1) 65%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59999",endColorstr="#fff172",GradientType=1);
+  border-radius: 1rem;
+  border-bottom-right-radius: 6rem;
+  margin-bottom: 1.2rem;
+}
+.hero__contents {
+  display: flex;
+  margin-top: 2%;
+  font-size: 0.6rem;
+  padding: 4% 4%;
 }
 .hero__colOne > h3 {
-    margin-bottom: 0.2rem;
+  font-size: 2em;
 }
-
 .hero__colOne > p {
-    margin: 0.5rem 0;
-    font-size: 0.5em;
-    font-weight: normal;
+  font-size: 0.9em;
 }
-
-.hero__contents {
-    margin-top: 2%;
-    justify-content: space-between;
-    color: white;
-    display: flex;
-    padding: 4%;
-    height: 60vh;
+.hero__colOne {
+  flex: 0.7;
 }
-
-.buttons > p:hover {
-    transition: 0.3s;
-    background-color: rgba(238, 238, 54, 0.945);
-}
-
-.buttons {
-    display: flex;
-}
-
-.buttons > p {
-    cursor: pointer;
-    padding: 0.2rem;
-    margin-right: 2%;
-    border: 1px solid grey;
-    border-radius: 0.2rem;
-    max-width: fit-content;
-    font-size: 0.6rem;
-}
-
 .hero__colTwo {
-    height: 32vh;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-.hero__colTwo > img {
-    margin: 2rem 0;
+  flex: 0.3;
+}
+.teamwork__image {
+  width: 100%;
+}
+.buttons {
+  display: flex;
+}
+.teamwork__image > img {
+  width: 100%;
+}
+.buttons > p {
+  background-color: grey;
+  cursor: pointer;
+  margin-left: 2.5%;
+  padding: 0.5em 1.4em;
+  border-radius: 0.5em;
+}
+.buttons > p:hover {
+  background-color: red;
 }
