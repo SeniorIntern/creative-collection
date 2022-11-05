@@ -1,0 +1,46 @@
+.business__imgBox {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+.container__businessCard {
+    width: 100%;
+}
+.business_list {
+    display: flex;
+    justify-content: center;
+}
+
+.container__businessCard + .container__businessCard {
+    margin-left: 2vmin;
+}
+
+.business__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.business__text > h4 {
+    font-size: 0.8rem;
+    min-width: fit-content;
+    margin-bottom: 0.3em;
+}
+
+.business__text > span {
+    font-size: 0.4rem;
+}
+
+.business__img {
+    width: 100%;
+}
+.business__img > img {
+    width: 100%;
+}
+.list {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,64 +1,79 @@
 .heroContainer {
-  color: white;
-  background: rgb(245, 153, 153);
-  background: -moz-linear-gradient(
-    122deg,
-    rgba(245, 153, 153, 1) 35%,
-    rgba(255, 241, 114, 1) 65%
-  );
-  background: -webkit-linear-gradient(
-    122deg,
-    rgba(245, 153, 153, 1) 35%,
-    rgba(255, 241, 114, 1) 65%
-  );
-  background: linear-gradient(
-    122deg,
-    rgba(245, 153, 153, 1) 35%,
-    rgba(255, 241, 114, 1) 65%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59999",endColorstr="#fff172",GradientType=1);
-  border-radius: 1rem;
-  border-bottom-right-radius: 6rem;
-  margin-bottom: 1.2rem;
+    color: white;
+    background: rgb(245, 153, 153);
+    background: -moz-linear-gradient(
+        122deg,
+        rgba(245, 153, 153, 1) 35%,
+        rgba(255, 241, 114, 1) 65%
+    );
+    background: -webkit-linear-gradient(
+        122deg,
+        rgba(245, 153, 153, 1) 35%,
+        rgba(255, 241, 114, 1) 65%
+    );
+    background: linear-gradient(
+        122deg,
+        rgba(245, 153, 153, 1) 35%,
+        rgba(255, 241, 114, 1) 65%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59999",endColorstr="#fff172",GradientType=1);
+    border-radius: 1rem;
+    border-bottom-right-radius: 6rem;
+    margin-bottom: 1.2rem;
 }
-.hero__contents {
-  display: flex;
-  margin-top: 2%;
-  font-size: 0.6rem;
-  padding: 4% 4%;
-}
-.hero__colOne > h3 {
-  font-size: 2em;
-}
-.hero__colOne > p {
-  font-size: 0.9em;
-}
-.hero__colOne {
-  flex: 0.7;
-}
-.hero__colTwo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-  flex: 0.3;
+.hero__contents {
+    display: flex;
+    margin-top: 2%;
+    font-size: 0.6rem;
+    justify-content: space-between;
+    padding: 3%;
+    padding-bottom: 12%;
 }
+
+.hero__colOne > h3 {
+    font-size: 2em;
+    margin: 2%;
+    margin-bottom: 3%;
+}
+
+.hero__colOne > p {
+    font-size: 0.9em;
+    margin: 2% 2%;
+}
+
+.hero__colOne {
+    flex: 0.7;
+}
+
+.hero__colTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 0.255;
+}
+
 .teamwork__image {
-  width: 100%;
+    width: 100%;
 }
+
 .buttons {
-  display: flex;
+    display: flex;
 }
+
 .teamwork__image > img {
-  width: 100%;
+    width: 70%;
 }
+
 .buttons > p {
-  background-color: grey;
-  cursor: pointer;
-  margin-left: 2.5%;
-  padding: 0.5em 1.4em;
-  border-radius: 0.5em;
+    background-color: grey;
+    cursor: pointer;
+    margin-left: 2.5%;
+    padding: 0.5em 1.4em;
+    border-radius: 0.5em;
 }
+
 .buttons > p:hover {
-  background-color: red;
+    background-color: red;
 }

@@ -1,6 +1,6 @@
 .app__container {
-    margin: 2%;
-    /* background-color: rgb(212, 199, 199); */
+    width: 90%;
+    margin: 1% auto;
 }
 
 html {
