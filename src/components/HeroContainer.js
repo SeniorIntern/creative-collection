@@ -4,7 +4,7 @@ import teamwork from '../assets/images/teamwork.png'
 
 export default function HeroContainer() {
   return (
-    <div className='HeroContainer'>
+    <div className='heroContainer'>
       <div className='hero__contents'>
         <div className='hero__colOne'>
           {/* Message */}
@@ -24,7 +24,9 @@ export default function HeroContainer() {
           </div>
         </div>
         <div className='hero__colTwo'>
-          <img src={teamwork} alt='teamwork' />
+          <div className='teamwork__image'>
+            <img src={teamwork} alt='teamwork' />
+          </div>
         </div>
       </div>
     </div>
