@@ -1,18 +1,27 @@
 .homeBody {
-    height: 100vh;
+  height: 100vh;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    margin: 0 4%;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin: 0 4%;
+}
+.homeBody > h3 {
+  margin-bottom: 0.5em;
 }
 .left__homebody {
-    flex: 6;
-    background-color: red;
+  flex: 0.7;
+  background-color: red;
 }
 .right__homebody {
-    flex: 1;
-    background-color: green;
+  flex: 0.25;
+  background-color: green;
+}
+.left__homebody__lowerContainer {
+  display: flex;
+}
+.homeBodyImg {
+  width: 100%;
 }
