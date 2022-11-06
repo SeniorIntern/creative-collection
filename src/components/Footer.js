@@ -1,80 +1,75 @@
 import React from "react";
 import "../assets/styles/Footer.css";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import HomeIcon from "@mui/icons-material/Home";
 import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function Footer() {
     return (
         <div className="footer">
+            <div className="footer__logo">{/* <img src={logo} /> */}</div>
             <div className="footer__contents">
-                {/* about us */}
-                <div className="about__us footer__part">
-                    <h4>About Us</h4>
-                    <div className="info">
-                        <p className="contents__paragraph">
-                            Chaudhary Group is headquartered in Kathmandu; We
-                            provide world-class services and products in various
-                            fields such as hotels and resorts, education,
-                            realty, FMCG (food & beverage), financial services,
-                            consumer electronics, cement, hydropower, and EPC.
-                        </p>
-                    </div>
+                <div className="abc">
+                    <div className="footer__contacts">
+                        <h4>Contact Us</h4>
 
-                    <div className="footer__contact">
-                        {/* icons and address */}
-                        <h5>
-                            <HomeIcon fontSize="small" />
-                            <p>www.chaudharygroup.com</p>
-                        </h5>
-                        <h5>
-                            <MailOutlineIcon fontSize="small" />
-                            <p> info@chaudharygroup.com</p>
-                        </h5>
-                        <h5>
-                            <LocationOnIcon fontSize="small" />
-                            <p> Sanepa,Lalitpur, Nepal</p>
-                        </h5>
                         <h5>
                             <CallIcon fontSize="small" />
-                            <p> +977–1–5522330</p>
+                            <p>(+977 9812354321)</p>
                         </h5>
+
                         <h5>
-                            <FormatAlignJustifyIcon fontSize="small" />
-                            <p> Careers</p>
+                            <MailOutlineIcon fontSize="small" />
+                            <p>something@gmail.com</p>
+                        </h5>
+
+                        <h5>
+                            <LocationOnIcon fontSize="small" />
+                            <p>Newroad, pokhara</p>
                         </h5>
                     </div>
                 </div>
-                {/* recent post */}
-                <div className="recentPosts footer__part">
-                    <h4>Recent Posts</h4>
-                    <p className="contents__paragraph">
-                        Chaudhary Group is headquartered in Kathmandu; We
-                        provide world-class services and products in various
-                        fields such as hotels and resorts, education, realty,
-                        FMCG (food & beverage), financial services, consumer
-                        electronics, cement, hydropower, and EPC.
-                    </p>
-                </div>
 
-                {/* by creative group: other business */}
-                <div className="byCG footer__part">
-                    <h4>By Chaudhary Group </h4>
-                    <p className="contents__paragraph">
-                        Chaudhary Group is headquartered in Kathmandu; We
-                        provide world-class services and products in various
-                        fields such as hotels and resorts, education, realty,
-                        FMCG (food & beverage), financial services, consumer
-                        electronics, cement, hydropower, and EPC.
-                    </p>
+                <div className="footer__quickLinks">
+                    <h4>Quick Links</h4>
+                    <h5>Home</h5>
+                    <h5>About</h5>
+                    <h5>Our products</h5>
+                </div>
+                <div className="footer__stayTouch">
+                    <h4>Find Us</h4>
+                    <h5>
+                        <FacebookIcon fontSize="small" />
+                        <p>Facebook</p>
+                    </h5>
+                    <h5>
+                        <InstagramIcon fontSize="small" />
+                        <p>Instagram</p>
+                    </h5>
                 </div>
             </div>
-            <hr style={{ width: "100%" }} />
-            <div className="footer__copyright">
-                <p>© Copyright 2022. All Rights Reserved</p>
-                <p>Design & Developed by ABC</p>
+            <hr style={{ color: "white" }} />
+            <div className="footer__copyrightSection abc">
+                <div className="footer__copyrightLeft">
+                    <p
+                        style={{
+                            fontWeight: "bold",
+                            fontSize: "0.4rem",
+                            color: "white",
+                        }}
+                    >
+                        Creative Group. Pvt. Ltd. All Rights Reserved
+                    </p>
+                </div>
+                <div className="footer__copyrightRight">
+                    <div className="sp">
+                        <p>Terms of Service</p>
+                        <p>Privacy Policy</p>
+                        <p>Terms of use</p>
+                    </div>
+                </div>
             </div>
         </div>
     );

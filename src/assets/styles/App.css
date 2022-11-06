@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
+
+#root {
+    font-family: "Jost", sans-serif;
+}
+
 .app__HeaderContainer {
     color: black;
     width: 100%;
