@@ -7,11 +7,14 @@ import im3 from '../assets/images/OIP.jfif'
 export default function HomeBody() {
   return (
     <div className='homeBody'>
-      <h3 className='container'>Top News</h3>
+      <h4>Top News</h4>
       <div className='container'>
         <div className='left__homebody'>
           <div className='left__homebody__upperContainer'>
-            <img className='homeBodyImg' src={im1} alt='' />
+            <div className='container__uppercontainer__image'>
+              <img className='homeBodyImg' src={im1} alt='' />
+              <div className='bottom__left'>Here is something</div>
+            </div>
           </div>
           <div className='left__homebody__lowerContainer'>
             <div className='left__homebody__lowerContainer__containers'>
@@ -22,7 +25,26 @@ export default function HomeBody() {
             </div>
           </div>
         </div>
-        <div className='right__homebody'>s</div>
+        <div className='right__homebody'>
+          <div className='right__homebody__container'>
+            <h5> What's hot</h5>
+
+            <div className='right__homebody__component'>
+              <img src={im1} alt='' />
+              <p className='homebody__time'>2 hrs ago</p>
+              <p className='homebodycontents'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div className='right__homebody__component'>
+              <img src={im1} alt='' />
+              <p className='homebody__time'>2 hrs ago</p>
+              <p className='homebodycontents'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
