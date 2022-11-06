@@ -1,0 +1,17 @@
+// pink followed by yellow
+{
+    background: rgb(245,153,153);
+    background: -moz-linear-gradient(122deg, rgba(245,153,153,1) 35%, rgba(255,241,114,1) 65%);
+    background: -webkit-linear-gradient(122deg, rgba(245,153,153,1) 35%, rgba(255,241,114,1) 65%);
+    background: linear-gradient(122deg, rgba(245,153,153,1) 35%, rgba(255,241,114,1) 65%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59999",endColorstr="#fff172",GradientType=1);
+}
+
+// yellow followed by pink
+{
+    background: rgb(255,241,114);
+    background: -moz-linear-gradient(122deg, rgba(255,241,114,1) 35%, rgba(245,153,153,1) 60%);
+    background: -webkit-linear-gradient(122deg, rgba(255,241,114,1) 35%, rgba(245,153,153,1) 60%);
+    background: linear-gradient(122deg, rgba(255,241,114,1) 35%, rgba(245,153,153,1) 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff172",endColorstr="#f59999",GradientType=1);
+}

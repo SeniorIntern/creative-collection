@@ -9,16 +9,25 @@ import HomeBody from "./components/HomeBody";
 export default function App() {
     return (
         <div className="app">
-            <div className="app__container">
+            <div className="app__HeaderContainer">
                 {/* Header */}
                 <Header />
+            </div>
+            <div className="app__container">
                 {/* Hero Image */}
                 <HeroContainer />
+            </div>
+            <div className="gradient__Container"></div>
+            <div className="app__container">
                 {/* react router dom start*/}
                 <HomeBody />
                 {/* Business Verticles */}
                 <BusinessVerticles />
                 {/* react router dom end*/}
+                {/* Footer */}
+            </div>
+            <div className="app__containerTwo"></div>
+            <div className="app__FooterContainer">
                 {/* Footer */}
                 <Footer />
             </div>

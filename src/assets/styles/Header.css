@@ -1,10 +1,13 @@
 .header__contents {
     display: flex;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
+    font-weight: bold;
     /* background-color: seagreen; */
     margin: 0 4%;
-    height: 1.6rem;
+    height: 2rem;
     justify-content: space-between;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
 }
 
 .content__left {
@@ -44,9 +47,9 @@
 .user__action > button {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     font-size: 0.5rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.1rem 0.5rem;
     cursor: pointer;
-    border: 0.01rem solid grey;
+    border: 0.05rem solid grey;
     color: black;
     background-color: white;
     border-radius: 0.18rem;

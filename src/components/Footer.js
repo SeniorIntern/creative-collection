@@ -29,22 +29,18 @@ export default function Footer() {
                             <HomeIcon fontSize="small" />
                             <p>www.chaudharygroup.com</p>
                         </h5>
-
                         <h5>
                             <MailOutlineIcon fontSize="small" />
                             <p> info@chaudharygroup.com</p>
                         </h5>
-
                         <h5>
                             <LocationOnIcon fontSize="small" />
                             <p> Sanepa,Lalitpur, Nepal</p>
                         </h5>
-
                         <h5>
                             <CallIcon fontSize="small" />
                             <p> +977–1–5522330</p>
                         </h5>
-
                         <h5>
                             <FormatAlignJustifyIcon fontSize="small" />
                             <p> Careers</p>
