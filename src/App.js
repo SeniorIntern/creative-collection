@@ -21,8 +21,6 @@ export default function App() {
       <div className='app__container'>
         {/* react router dom start*/}
         <HomeBody />
-        {/* Business Verticles */}
-        <BusinessVerticles />
         {/* react router dom end*/}
         {/* Footer */}
       </div>
