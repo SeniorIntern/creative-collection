@@ -18,15 +18,6 @@ export default function Header() {
                         <nav className="header__navOption ">
                             <ul className="routeOptions">
                                 <NavLink
-                                    to="/products"
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "black",
-                                    }}
-                                >
-                                    <li>Our Products</li>
-                                </NavLink>
-                                <NavLink
                                     to="/about"
                                     style={{
                                         textDecoration: "none",
@@ -43,6 +34,15 @@ export default function Header() {
                                     }}
                                 >
                                     <li>Events</li>
+                                </NavLink>
+                                <NavLink
+                                    to="/products"
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "black",
+                                    }}
+                                >
+                                    <li>Our Products</li>
                                 </NavLink>
                                 <NavLink
                                     to="/contact"

@@ -1,3 +1,76 @@
-.about__work{
-    background-color: ;
+.about__work {
+    background-color: #f6f6f6;
+    margin: auto;
+    width: 100%;
+    padding: 1em 4em;
+}
+
+.work__intro {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+}
+
+.work__intro > p {
+    font-size: 0.4em;
+    font-weight: bold;
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.work__intro > h4 {
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.shadow {
+    border-bottom: 0.1em solid rgb(126, 123, 123);
+    max-width: fit-content;
+    text-align: center;
+    color: rgb(88, 86, 86);
+    font-weight: bolder;
+}
+
+.work__scope {
+    display: flex;
+    margin-top: 1.6em;
+    justify-content: space-evenly;
+}
+
+.circle__img {
+    background: orange;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    margin: 0.4em;
+}
+
+.col {
+    text-align: center;
+}
+
+.col > p {
+    color: rgb(7, 165, 7);
+    font-size: 0.4rem;
+}
+
+.about_proudteammates > h4 {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 2.4em;
+    margin-bottom: 1.6em;
+}
+
+.teammate_photos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.teammate_photos > p {
+    margin-top: 0;
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
 }
