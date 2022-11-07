@@ -10,37 +10,6 @@
     margin: 0;
     background-color: #f5f5f5;
 }
-.gradient__Container {
-    height: 0.3rem;
-    margin-bottom: 1em;
-    margin-top: 2em;
-    background: rgb(245, 156, 153);
-    background: -moz-linear-gradient(
-        122deg,
-        rgba(245, 156, 153, 0) 21%,
-        rgba(245, 153, 153, 0.7651435574229692) 44%,
-        rgba(245, 153, 153, 0.9500175070028011) 62%,
-        rgba(247, 227, 146, 1) 85%,
-        rgba(247, 227, 146, 1) 88%
-    );
-    background: -webkit-linear-gradient(
-        122deg,
-        rgba(245, 156, 153, 0) 21%,
-        rgba(245, 153, 153, 0.7651435574229692) 44%,
-        rgba(245, 153, 153, 0.9500175070028011) 62%,
-        rgba(247, 227, 146, 1) 85%,
-        rgba(247, 227, 146, 1) 88%
-    );
-    background: linear-gradient(
-        122deg,
-        rgba(245, 156, 153, 0) 21%,
-        rgba(245, 153, 153, 0.7651435574229692) 44%,
-        rgba(245, 153, 153, 0.9500175070028011) 62%,
-        rgba(247, 227, 146, 1) 85%,
-        rgba(247, 227, 146, 1) 88%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59c99",endColorstr="#f7e392",GradientType=1);
-}
 
 .app__container {
     width: 90%;

@@ -1,34 +1,32 @@
-import React from 'react'
-import './assets/styles/App.css'
-import { BusinessVerticles } from './components/BusinessVerticles'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import HeroContainer from './components/HeroContainer'
-import HomeBody from './components/HomeBody'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./assets/styles/App.css";
+import About from "./components/About";
+import { BusinessVerticles } from "./components/BusinessVerticles";
+import Contact from "./components/Contact";
+import Events from "./components/Events";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import HomeBody from "./components/HomeBody";
+import NotFound from "./components/NotFound";
+import Products from "./components/Products";
 
 export default function App() {
   return (
-    <div className='app'>
-      <div className='app__HeaderContainer'>
-        {/* Header */}
-        <Header />
-      </div>
-      <div className='app__container'>
-        {/* Hero Image */}
-        <HeroContainer />
-      </div>
-      <div className='gradient__Container'></div>
-      <div className='app__container'>
-        {/* react router dom start*/}
-        <HomeBody />
-        {/* react router dom end*/}
-        {/* Footer */}
-      </div>
-      <div className='app__containerTwo'></div>
-      <div className='app__FooterContainer'>
-        {/* Footer */}
-        <Footer />
-      </div>
-    </div>
-  )
+        <Router>
+            <div className="app__container">
+                <Header />
+                <Routes>
+                    {/* Handle path exception. root path ="/" */}
+                    <Route path="/" element={<HomeBody />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </div>
+            <Footer />
+        </Router>
+    );
 }
