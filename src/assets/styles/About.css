@@ -39,7 +39,7 @@
 }
 
 .circle__img {
-    background: orange;
+    background: #d180d8;
     border-radius: 50%;
     width: 2em;
     height: 2em;
@@ -50,9 +50,16 @@
     text-align: center;
 }
 
-.col > p {
+.col > h5 {
     color: rgb(7, 165, 7);
     font-size: 0.4rem;
+    margin-bottom: 1em;
+}
+
+.col > p {
+    width: 12em;
+    text-align: center;
+    font-size: 0.25rem;
 }
 
 .about_proudteammates > h4 {
@@ -65,6 +72,11 @@
 .teammate_photos {
     display: flex;
     justify-content: space-evenly;
+}
+
+.team__pic {
+    width: 10em;
+    height: 10em;
 }
 
 .teammate_photos > p {

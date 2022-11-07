@@ -66,3 +66,8 @@ h5 {
     display: flex;
     justify-content: space-evenly;
 }
+
+hr {
+    color: "white";
+    max-height: 0.025rem;
+}

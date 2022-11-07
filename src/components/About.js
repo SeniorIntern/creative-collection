@@ -24,20 +24,48 @@ export default function About() {
                 </div>
                 <div className="work__scope">
                     <div className="col">
-                        <img src={pen} alt="" className="circle__img" />
-                        <p>Mobile Development </p>
+                        <div className="circle__img">
+                            <img src={pen} alt="" />
+                        </div>
+                        <h5>Mobile Development </h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
                     </div>
                     <div className="col">
-                        <img src={send} alt="" className="circle__img" />
-                        <p>Graphics Design</p>
+                        <div className="circle__img">
+                            <img src={send} alt="" />
+                        </div>
+                        <h5>Graphics Design</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
                     </div>
                     <div className="col">
-                        <img src={smartphone} alt="" className="circle__img" />
-                        <p>Motion Graphics</p>
+                        <div className="circle__img">
+                            <img src={smartphone} alt="" />
+                        </div>
+                        <h5>Motion Graphics</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
                     </div>
                     <div className="col">
-                        <img src={video} alt="" className="circle__img" />
-                        <p>Email Marketing</p>
+                        <div className="circle__img">
+                            <img src={video} alt="" />
+                        </div>
+                        <h5>Email Marketing</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -47,23 +75,23 @@ export default function About() {
                 <div className="teammate_photos">
                     {/* SETUP PROPS LATER */}
                     <p>
-                        <img src={mate1} alt="Ram" />
+                        <img src={mate1} alt="Ram" className="team__pic" />
                         <p>Demin Giri</p>
                     </p>
                     <p>
-                        <img src={mate2} alt="Subash" />
+                        <img src={mate2} alt="Subash" className="team__pic" />
                         <p>Subash Gurung</p>
                     </p>
                     <p>
-                        <img src={mate3} alt="Rajesh" />
+                        <img src={mate3} alt="Rajesh" className="team__pic" />
                         <p>Rajesh Koirala</p>
                     </p>
                     <p>
-                        <img src={mate4} alt="Bipin" />
+                        <img src={mate4} alt="Bipin" className="team__pic" />
                         <p>Bipin Thapa</p>
                     </p>
                     <p>
-                        <img src={mate5} alt="Shiva" />
+                        <img src={mate5} alt="Shiva" className="team__pic" />
                         <p>Shiva Khanal</p>
                     </p>
                 </div>

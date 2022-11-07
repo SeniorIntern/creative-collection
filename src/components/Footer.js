@@ -50,7 +50,7 @@ export default function Footer() {
                     </h5>
                 </div>
             </div>
-            <hr style={{ color: "white" }} />
+            <hr />
             <div className="footer__copyrightSection abc">
                 <div className="footer__copyrightLeft">
                     <p
