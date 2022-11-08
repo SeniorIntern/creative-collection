@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../assets/styles/About.css'
 import mate1 from '../assets/images/Demin.PNG'
 import ceoImage from '../assets/images/binod.png'
@@ -10,19 +10,18 @@ import pen from '../assets/images/icons/pen.png'
 import send from '../assets/images/icons/send.png'
 import smartphone from '../assets/images/icons/smartphone.png'
 import video from '../assets/images/icons/video.png'
+import { height } from '@mui/system'
 
 export default function About() {
   const shortMessage =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur doloribus accusantium blanditiisadipisicing elit. Quo consequuntur doloribus.Quo consequuntur doloribus.Quo consequuntur doloribus.'
-  const longMessage =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur doloribus accusantium blanditiis aliquam molestias, modi accusamus facilis amet quibusdam et ipsam provident sint quod eligendi fugiat, atque numquam quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur doloribus accusantium blanditiis aliquam molestias, modi accusamus facilis amet quibusdam et ipsam provident sint quod eligendi fugiat, atque numquam quisquam.'
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur dolLorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur doloribus accusantium blanditiis aliquam molestias, modi accusamus facilis amet quibusdam et ipsam provident sint quod eligendi fugiat, atque numquam quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur doloribus accusantium blanditiis aliquam molestias, modi accusamus facilis amet quibusdam et ipsam provident sint quod eligendi fugiat, atque numquam quisquamoribus accusantium blanditiis '
 
   const [message, setMessage] = useState(shortMessage)
-
-  const readMore = () => {
-    setMessage(longMessage)
+  const readmore = () => {
+    document.getElementById('ceo__intro').style =
+      'overflow: visible;height:fit-content;'
   }
-
+  const [clickedReadMore, setReadMoreStatus] = useState(false)
   return (
     <div className='about__container'>
       <div className='about__work'>
@@ -87,12 +86,11 @@ export default function About() {
           <div className='ceo__container__right'>
             <h4>Mr. Balram Poudel</h4>
             <h5>CEO</h5>
-            <p>{}</p>
 
             <div className='ceo__readmore'>
-              <p>{message}</p>
-              <button className='btn' onClick={() => readMore()}>
-                Read More
+              <p id='ceo__intro'>{message}</p>
+              <button className='btn' onClick={readmore}>
+                Read More...
               </button>
             </div>
           </div>

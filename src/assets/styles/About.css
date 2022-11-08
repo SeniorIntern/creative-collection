@@ -65,7 +65,10 @@
 .btn {
   /* border: none; */
   background: transparent;
-  color: greenyellow;
+  margin: 0.8em 0;
+  cursor: pointer;
+  color: #9e5849;
+  border: none;
 }
 
 .about_proudteammates > h4 {
@@ -130,9 +133,16 @@
   font-size: 0.57rem;
   font-weight: 200;
 }
-.ceo__readmore > p {
+
+#ceo__intro {
   font-size: 0.35rem;
+  height: 2rem;
   padding-bottom: 0.5em;
+  overflow: hidden;
+  /* text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical; */
 }
 .ceo__container__right > p {
   font-size: 0.43rem;
