@@ -18,10 +18,8 @@ export default function Event({ id, title, image }) {
       <div className='container'>
         <img src={image} alt='Avatar' className='image' />
         <div className='overlay'>
-          <div className='overlay__contents'>
-            <div className='text'>{title}</div>
-            {visible && <button className='event__readMore'>Read More</button>}
-          </div>
+          <div className='text'>{title}</div>
+          {visible && <button className='event__readMore'>Read More</button>}
         </div>
         <br />
       </div>
