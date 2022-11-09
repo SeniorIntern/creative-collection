@@ -70,7 +70,9 @@
   color: #9e5849;
   border: none;
 }
-
+.about_proudteammates {
+  width: 100%;
+}
 .about_proudteammates > h4 {
   text-align: center;
   font-weight: bolder;
@@ -78,17 +80,18 @@
   margin-bottom: 1.6em;
 }
 
-.teammate_photos {
+.team__pic {
+  width: 9.5em;
+  height: 9.5em;
+}
+.members {
   display: flex;
   justify-content: space-evenly;
 }
-
-.team__pic {
-  width: 10em;
-  height: 10em;
+.member {
+  margin-left: 0.1em;
 }
-
-.teammate_photos > p {
+.member > p {
   margin-top: 0;
   font-size: 0.4rem;
   font-weight: bold;

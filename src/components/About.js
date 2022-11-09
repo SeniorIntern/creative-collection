@@ -98,28 +98,38 @@ export default function About() {
       </div>
       <div className='about_proudteammates'>
         <h4>WE ARE PROUD</h4>
-        <div className='teammate_photos'>
+        <div className='members'>
           {/* SETUP PROPS LATER */}
-          <p>
-            <img src={mate1} alt='Ram' className='team__pic' />
-            <p>Demin Giri</p>
-          </p>
-          <p>
-            <img src={mate2} alt='Subash' className='team__pic' />
-            <p>Subash Gurung</p>
-          </p>
-          <p>
-            <img src={mate3} alt='Rajesh' className='team__pic' />
-            <p>Rajesh Koirala</p>
-          </p>
-          <p>
-            <img src={mate4} alt='Bipin' className='team__pic' />
-            <p>Bipin Thapa</p>
-          </p>
-          <p>
-            <img src={mate5} alt='Shiva' className='team__pic' />
-            <p>Shiva Khanal</p>
-          </p>
+          <div className='member'>
+            <p>
+              <img src={mate1} alt='Ram' className='team__pic' />
+              <p>Demin Giri</p>
+            </p>
+          </div>
+          <div className='member'>
+            <p>
+              <img src={mate2} alt='Subash' className='team__pic' />
+              <p>Subash Gurung</p>
+            </p>
+          </div>
+          <div className='member'>
+            <p>
+              <img src={mate3} alt='Rajesh' className='team__pic' />
+              <p>Rajesh Koirala</p>
+            </p>
+          </div>
+          <div className='member'>
+            <p>
+              <img src={mate4} alt='Bipin' className='team__pic' />
+              <p>Bipin Thapa</p>
+            </p>
+          </div>
+          <div className='member'>
+            <p>
+              <img src={mate5} alt='Shiva' className='team__pic' />
+              <p>Shiva Khanal</p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
