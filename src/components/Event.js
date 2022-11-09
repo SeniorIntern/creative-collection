@@ -9,20 +9,22 @@ export default function Event({ id, title, image }) {
     }
 
     return (
-        <div className="event">
-            <img
-                onClick={() => {
-                    renderBtn();
-                }}
-                src={image}
-                alt=""
-            />
-            {visible && (
-                <div className="title">
-                    <p>{title}</p>
-                    <button className="event__btn">Learn More</button>
+        <div
+            className="event"
+            onClick={() => {
+                renderBtn();
+            }}
+        >
+            <div className="container">
+                <img src={image} alt="Avatar" className="image" />
+                <div className="overlay">
+                    <div className="text">{title}</div>
+                    {visible && (
+                        <button className="event__readMore">Read More</button>
+                    )}
                 </div>
-            )}
+                <br />
+            </div>
         </div>
     );
 }
