@@ -1,85 +1,82 @@
 .event {
-  cursor: pointer;
-  position: relative;
-  text-align: center;
-  width: 9rem;
-  display: flex;
-  flex-direction: column;
-  height: 5rem;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
 }
 .event:hover {
-  transform: scaleX(103%);
-  transition: 0.7s ease-in-out;
-}
-.event + .event {
-  padding-left: 0.5em;
+    transform: scaleX(103%);
+    transition: 0.7s ease-in-out;
 }
 
 .title > p {
-  font-size: 40%;
-  color: white;
-  font-weight: bold;
-  overflow: hidden;
-  position: absolute;
-  bottom: 1.8rem;
-  top: 3.8em;
-  left: 2rem;
-  right: 2rem;
+    font-size: 40%;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1.8rem;
+    top: 3.8em;
+    left: 2rem;
+    right: 2rem;
 }
 
 /* new test css */
 .container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .image {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 .overlay {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 1.2s ease;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 1.2s ease;
 }
 
 .overlay:hover {
-  opacity: 100%;
-  background: rgba(43, 35, 35, 0.5);
-  backdrop-filter: blur(5px);
+    opacity: 100%;
+    background: rgba(43, 35, 35, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .text {
-  color: white;
-  font-size: 0.4rem;
-  font-weight: bolder;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+    color: white;
+    font-size: 0.4rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .event__readMore {
-  border: none;
-  background-color: rgb(56, 223, 56);
-  color: white;
-  font-weight: bold;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  font-size: 0.4rem;
-  max-width: fit-content;
-  margin: auto;
-  margin-top: 10em;
+    border: none;
+    background-color: rgb(56, 223, 56);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.2em;
+    font-size: 0.3rem;
+    max-width: fit-content;
+    margin: auto;
+    padding: 0.2em;
+    position: absolute;
+    bottom: 0.8em;
+    left: 5em;
+    right: 5em;
 }
