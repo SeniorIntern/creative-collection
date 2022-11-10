@@ -5,11 +5,14 @@ import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import webLogo from "../assets/images/web__logo.png";
 
 export default function Footer() {
     return (
         <div className="footer">
-            <div className="footer__logo">{/* <img src={logo} /> */}</div>
+            <div className="footer__logo">
+                <img src={webLogo} />
+            </div>
             <div className="footer__contents">
                 <div className="abc">
                     <div className="footer__contacts">

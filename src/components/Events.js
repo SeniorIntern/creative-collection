@@ -1,77 +1,53 @@
-import React from 'react'
-import Event from './Event'
-import event1 from '../assets/images/Event1.jpg'
-import event2 from '../assets/images/Event2.jpg'
-import event3 from '../assets/images/Event3.jpg'
-import '../assets/styles/Events.css'
+import React from "react";
+import Event from "./Event";
+import event1 from "../assets/images/Event1.jpg";
+import event2 from "../assets/images/Event2.jpg";
+import event3 from "../assets/images/Event3.jpg";
+import event4 from "../assets/images/Event4.jpg";
+import event5 from "../assets/images/Event5.jpg";
+import "../assets/styles/Events.css";
 
 export default function Events() {
+    // Object for Event
+    const events = [
+        {
+            title: "Celebrating Annual Anniversary 2022",
+            image: event1,
+        },
+        {
+            title: "Happy Thanksgiving Program 2022",
+            image: event2,
+        },
+        {
+            title: "Holly Celebration by Creative Group - 2022",
+            image: event3,
+        },
+        {
+            title: "Happy Thanksgiving Program 2022",
+            image: event4,
+        },
+        {
+            title: "Happy Thanksgiving Program 2022",
+            image: event5,
+        },
+        {
+            title: "Happy Thanksgiving Program 2022",
+            image: event5,
+        },
+        {
+            title: "Happy Thanksgiving Program 2022",
+            image: event5,
+        },
+    ];
+    
     return (
-        <div className='events'>
-            <h1 className='eventTitle'>Welcome to Our Events Archieve</h1>
-            <div className='events__list'>
-                <Event
-                    id='1'
-                    title='Celebrating Annual Anniversary 2022'
-                    image={event1}
-                />
-
-                <Event
-                    id='2'
-                    title='Happy Thanksgiving Program 2022'
-                    image={event2}
-                />
-
-                <Event
-                    id='3'
-                    title='Holly Celebration by Creative Group - 2022'
-                    image={event3}
-                />
-                <Event
-                    id='4'
-                    title='Celebrating Annual Anniversary 2022'
-                    image={event1}
-                />
-
-                <Event
-                    id='5'
-                    title='Happy Thanksgiving Program 2022'
-                    image={event2}
-                />
-
-                <Event
-                    id='6'
-                    title='Holly Celebration by Creative Group - 2022'
-                    image={event3}
-                />
-                <Event
-                    id='7'
-                    title='Happy Thanksgiving Program 2022'
-                    image={event2}
-                />
-
-                <Event
-                    id='8'
-                    title='Holly Celebration by Creative Group - 2022'
-                    image={event3}
-                />
-                <Event
-                    id='7'
-                    title='Holly Celebration by Creative Group - 2022'
-                    image={event3}
-                />
-                <Event
-                    id='8'
-                    title='Happy Thanksgiving Program 2022'
-                    image={event2}
-                />
-
-                <Event
-                    id='9'
-                    title='Holly Celebration by Creative Group - 2022'
-                    image={event3}
-                />
+        <div className="events">
+            <h1 className="eventTitle">Welcome to Our Events Archieve</h1>
+            <div className="events__list">
+                {events.map((event, index) => {
+                    return <Event key={index} {...event} />;
+                })}
             </div>
         </div>
-    )
+    );
 }

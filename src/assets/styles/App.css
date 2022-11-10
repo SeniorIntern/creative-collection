@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .app__HeaderContainer {
     color: black;
     width: 100%;
@@ -23,4 +24,11 @@
 
 html {
     font-size: 3.2vmax;
+}
+
+.mainBox {
+    min-height: 100vmax;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
 }

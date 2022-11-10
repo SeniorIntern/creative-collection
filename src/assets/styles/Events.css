@@ -1,6 +1,7 @@
 .events {
     background-color: #f5f5f5;
     border-radius: 0.6em;
+    padding-bottom: 0.8em;
 }
 
 .eventTitle {
@@ -15,6 +16,7 @@
     display: grid;
     gap: 1rem;
 }
+
 @media (min-width: 0rem) {
     .events__list {
         grid-template-columns: repeat(3, 3fr);

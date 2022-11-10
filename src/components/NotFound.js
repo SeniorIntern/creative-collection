@@ -1,11 +1,11 @@
 import React from "react";
 
-function NotFound() {
+export default function NotFound() {
     return (
         <div className="notFound">
-            <h1>Sorry. No Page Found</h1>
+            <h1 style={{ color: "red", textAlign: "center", margin: ".8em" }}>
+                Enter Valid URL.
+            </h1>
         </div>
     );
 }
-
-export default NotFound;
