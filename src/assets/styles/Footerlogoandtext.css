@@ -1,0 +1,9 @@
+.footerlogoandtext {
+    display: flex;
+    padding: 0.12em;
+}
+
+.footerlogoandtext > .MuiSvgIcon-root {
+    font-size: 0.5rem;
+    margin-right: 0.5em;
+}
