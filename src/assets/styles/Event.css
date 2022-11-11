@@ -4,7 +4,7 @@
     text-align: center;
 }
 .event:hover {
-    transform: scaleX(103%);
+    transform: scale(105%);
     transition: 0.7s ease-in-out;
 }
 
@@ -30,7 +30,7 @@
 .image {
     display: block;
     width: 100%;
-    height: auto;
+    height: 5em;
 }
 .overlay {
     position: absolute;

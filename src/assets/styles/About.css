@@ -1,152 +1,156 @@
 .about__work {
-  background-color: #f6f6f6;
-  margin: auto;
-  width: 100%;
-  padding: 1em 4em;
+    background-color: #f6f6f6;
+    margin: auto;
+    width: 100%;
+    padding: 1em 4em;
 }
 
 .work__intro {
-  /* text-align: center; */
-  display: flex;
-  flex-direction: column;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
 }
 
 .work__intro > p {
-  font-size: 0.4em;
-  font-weight: bold;
-  max-width: 50%;
-  text-align: center;
-  margin: auto;
+    font-size: 0.4em;
+    font-weight: bold;
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
 }
 
 .work__intro > h4 {
-  margin: auto;
-  margin-bottom: 1em;
+    margin: auto;
+    margin-bottom: 1em;
 }
 
 .shadow {
-  border-bottom: 0.1em solid rgb(126, 123, 123);
-  max-width: fit-content;
-  text-align: center;
-  color: rgb(88, 86, 86);
-  font-weight: bolder;
+    border-bottom: 0.1em solid rgb(126, 123, 123);
+    max-width: fit-content;
+    text-align: center;
+    color: rgb(88, 86, 86);
+    font-weight: bolder;
 }
 
 .work__scope {
-  display: flex;
-  margin-top: 1.6em;
-  justify-content: space-evenly;
+    display: flex;
+    margin-top: 1.6em;
+    justify-content: space-evenly;
 }
 
 .circle__img {
-  background: #d180d8;
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  margin: 0.4em;
+    background: #d180d8;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    margin: 0.4em;
 }
 .col {
-  text-align: center;
+    text-align: center;
 }
 
 .col > h5 {
-  color: rgb(7, 165, 7);
-  font-size: 0.4rem;
-  margin-bottom: 1em;
+    color: rgb(7, 165, 7);
+    font-size: 0.4rem;
+    margin-bottom: 1em;
 }
 
 .col > p {
-  width: 12em;
-  text-align: center;
-  font-size: 0.25rem;
+    width: 12em;
+    text-align: center;
+    font-size: 0.25rem;
 }
 
 .btn {
-  /* border: none; */
-  background: transparent;
-  margin: 0.8em 0;
-  cursor: pointer;
-  color: #9e5849;
-  border: none;
+    /* border: none; */
+    background: transparent;
+    margin: 0.8em 0;
+    cursor: pointer;
+    color: #9e5849;
+    border: none;
 }
 .about_proudteammates {
-  width: 100%;
+    width: 100%;
 }
 .about_proudteammates > h4 {
-  text-align: center;
-  font-weight: bolder;
-  margin-top: 2.4em;
-  margin-bottom: 1.6em;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 2.4em;
+    margin-bottom: 1.6em;
 }
 
 .team__pic {
-  width: 9.5em;
-  height: 9.5em;
+    width: 9.5em;
+    height: 9.5em;
 }
 .members {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 .member {
-  margin-left: 0.1em;
+    margin-left: 0.1em;
+}
+.member:hover {
+    transform: scale(105%);
+    transition: 0.7s ease-in-out;
 }
 .member > p {
-  margin-top: 0;
-  font-size: 0.4rem;
-  font-weight: bold;
-  color: grey;
-  text-align: center;
+    margin-top: 0;
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
 }
 .about_ceo {
-  padding-top: 7%;
-  padding-left: 9%;
-  padding-right: 12%;
-  color: #9e5849;
-  background-color: #eef9ff;
+    padding-top: 7%;
+    padding-left: 9%;
+    padding-right: 12%;
+    color: #9e5849;
+    background-color: #eef9ff;
 }
 .ceo__container {
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
-  margin-bottom: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-bottom: 2.4rem;
 }
 .ceo__container__left {
-  position: relative;
-  text-align: center;
-  flex: 0.4;
+    position: relative;
+    text-align: center;
+    flex: 0.4;
 }
 .ceo__image {
-  position: absolute;
-  top: 0.1em;
-  bottom: -1.5em;
+    position: absolute;
+    top: 0.1em;
+    bottom: -1.5em;
 }
 .ceo__image > img {
-  width: 80%;
-  border-radius: 100%;
+    width: 80%;
+    border-radius: 100%;
 }
 .ceo__container__right {
-  flex: 0.5;
+    flex: 0.5;
 }
 .ceo__container__right > h4 {
-  font-weight: 800;
-  font-size: 0.8rem;
+    font-weight: 800;
+    font-size: 0.8rem;
 }
 .ceo__container__right > h5 {
-  font-size: 0.57rem;
-  font-weight: 200;
+    font-size: 0.57rem;
+    font-weight: 200;
 }
 
 #ceo__intro {
-  font-size: 0.35rem;
-  height: 2rem;
-  padding-bottom: 0.5em;
-  overflow: hidden;
-  /* text-overflow: ellipsis;
+    font-size: 0.35rem;
+    height: 2rem;
+    padding-bottom: 0.5em;
+    overflow: hidden;
+    /* text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical; */
 }
 .ceo__container__right > p {
-  font-size: 0.43rem;
-  margin-bottom: 1em;
+    font-size: 0.43rem;
+    margin-bottom: 1em;
 }

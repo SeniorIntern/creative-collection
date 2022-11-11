@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }))
 const db = mysql.createPool({
     user: 'root',
     host: 'localhost',
-    password: '123Rabbit',
+    password: 'DZ6VF3iFYz59#HMo',
     database: 'creative_business',
 })
 
