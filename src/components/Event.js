@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import '../assets/styles/Event.css'
 
 export default function Event({ id, title, imageUrl }) {
@@ -19,9 +20,13 @@ export default function Event({ id, title, imageUrl }) {
                 <img src={imageUrl} alt='Avatar' className='image' />
                 <div className='overlay'>
                     <div className='text'>{title}</div>
-                    {visible && (
-                        <button className='event__readMore'>Read More</button>
-                    )}
+                    <NavLink to={`/event/${id}`}>
+                        {visible && (
+                            <button className='event__readMore'>
+                                Read More
+                            </button>
+                        )}
+                    </NavLink>
                 </div>
                 <br />
             </div>

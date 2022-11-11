@@ -10,7 +10,7 @@ export default function Events() {
             setEvents(await response.json())
         }
         getEvents()
-    }, [events])
+    }, [])
 
     return (
         <div className='events'>
