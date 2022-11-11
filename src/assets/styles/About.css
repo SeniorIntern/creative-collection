@@ -34,24 +34,43 @@
 
 .work__scope {
     display: flex;
-    margin-top: 1.6em;
-    justify-content: space-evenly;
+    margin: 1.3em 1em;
+    justify-content: space-between;
 }
 
 .circle__img {
-    background: #d180d8;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    margin: 0.4em;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.1em;
+    height: 2.1em;
+    margin: 0.3em;
+}
+.circle__img > img {
+    height: 0.9em;
+    width: 0.9em;
+}
+.img1 {
+    background-color: #ec724b;
+}
+.img2 {
+    background-color: #ffa25e;
+}
+.img3 {
+    background-color: #d180d8;
+}
+.img4 {
+    background-color: #559dd0;
 }
 .col {
     text-align: center;
+    padding: 0.2em;
 }
 
 .col > h5 {
     color: rgb(7, 165, 7);
-    font-size: 0.4rem;
+    font-size: 0.38rem;
     margin-bottom: 1em;
 }
 
