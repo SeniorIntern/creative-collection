@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../assets/styles/Event.css'
 
-export default function Event({ id, title, image }) {
+export default function Event({ id, title, imageUrl }) {
     const [visible, setVisible] = useState(false)
 
     function renderBtn() {
@@ -16,7 +16,7 @@ export default function Event({ id, title, image }) {
             }}
         >
             <div className='container'>
-                <img src={image} alt='Avatar' className='image' />
+                <img src={imageUrl} alt='Avatar' className='image' />
                 <div className='overlay'>
                     <div className='text'>{title}</div>
                     {visible && (
