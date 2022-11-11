@@ -7,38 +7,36 @@ export default function EventDetail() {
     const [event, setEvent] = useState([])
 
     useEffect(() => {
-        const getEvent = async () => {
+        const getEvents = async () => {
             const response = await fetch(
                 `http://localhost:5001/event/get/${id}`
             )
-            setEvent(await response.clone().json())
+            setEvent(await response.json())
         }
-        getEvent()
+        getEvents()
     }, [])
 
     return (
         <div className='eventDetail'>
-            {console.log(event)} {/*testing event state*/}
+            {console.table(event)}
             <div className=''>This is Event Detail Page</div>
-            <div className='event__detail'>
-                <h1>{event.title}</h1>
-            </div>
-            <div className='eventImages'>
-                <div className='event__firstImage'>
-                    <img src={event.imageUrl} />
+            {event.map((ev) => (
+                <div className='event__contents' key={ev.id}>
+                    <div className='event__detail'>
+                        <h1>{ev.title}</h1>
+                    </div>
+                    <div className='eventImages'>
+                        <div className='event__firstImage'>
+                            <img src={ev.imageUrl} />
+                        </div>
+                    </div>
+                    <div className='event__description'>
+                        <div className='event__firstDescription'>
+                            {ev.firstDesc}
+                        </div>
+                    </div>
                 </div>
-                {/*  
-                <div className='event__secondImage'></div>
-                <div className='event__thirdImage'></div>
-                */}
-            </div>
-            <div className='event__description'>
-                <div className='event__firstDescription'>{event.firstDesc}</div>
-                {/*  
-                <div className='event__secondDescription'></div>
-                <div className='event__ThirdDescription'></div>
-                */}
-            </div>
+            ))}
         </div>
     )
 }
