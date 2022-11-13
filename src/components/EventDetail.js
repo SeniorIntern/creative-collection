@@ -27,7 +27,7 @@ export default function EventDetail() {
                     </div>
                     <div className='eventImages'>
                         <div className='event__firstImage'>
-                            <img src={ev.imageUrl} />
+                            <img src={ev.firstImageUrl} />
                         </div>
                     </div>
                     <div className='event__description'>
