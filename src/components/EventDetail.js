@@ -53,6 +53,10 @@ export default function EventDetail() {
                                 src={ev.firstImageUrl}
                                 alt='Event fourth frame'
                             />
+                        <div className='event__images' type='image/jpeg'>
+                            <img src={ev.secondImageUrl} alt='' />
+                            <img src={ev.thirdImageUrl} alt='' />
+                            <img src={ev.fourthImageUrl} alt='' />
                         </div>
                     </div>
                     <div className='event__last_part event__descriptions'>
