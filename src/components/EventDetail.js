@@ -21,24 +21,38 @@ export default function EventDetail() {
             {event.map((ev) => (
                 <div className='event__detail' key={ev.id}>
                     <div className='event__title'>
-                        <h1>{ev.title}</h1>
+                        <h4>{ev.title}</h4>
                     </div>
                     <div className='event__image'>
                         <img src={ev.firstImageUrl} alt='Event first frame' />
-                    </div>
-                    <div className='event__images'>
-                        <img src={ev.secondImagerl} alt='Event second frame' />
-                        <img src={ev.thirdImageUrl} alt='Event third frame' />
-                        <img src={ev.fourthImageUrl} alt='Event fourth frame' />
-                    </div>
-                    <div className='event__description'>
-                        <div className='event__desc'>
-                            <h5>{ev.firstDesc}</h5>
+                        <div className='date__event'>
+                            <span>August 28, 2022</span>
                         </div>
-                        <div className='event__descriptions'>
-                            <h5>{ev.secondDesc}</h5>
-                            <h5>{ev.thirdDesc}</h5>
+                    </div>
+                    <div className='event__bottom'>
+                        <div className='event__description'>
+                            <div className='event__descriptions'>
+                                <h5>{ev.firstDesc}</h5>
+                            </div>
                         </div>
+                        <div className='event__images'>
+                            <img
+                                src={ev.firstImageUrl}
+                                alt='Event second frame'
+                            />
+                            <img
+                                src={ev.firstImageUrl}
+                                alt='Event third frame'
+                            />
+                            <img
+                                src={ev.firstImageUrl}
+                                alt='Event fourth frame'
+                            />
+                        </div>
+                    </div>
+                    <div className='event__last_part event__descriptions'>
+                        <h5>{ev.firstDesc}</h5>
+                        <h5>{ev.firstDesc}</h5>
                     </div>
                 </div>
             ))}
