@@ -30,20 +30,11 @@ export default function EventDetail() {
                         </div>
                     </div>
                     <div className='event__bottom'>
-                        <div className='event__description'>
-                            <div className='event__descriptions'>
-                                <h5>{ev.firstDesc}</h5>
-                            </div>
-                        </div>
                         <div className='event__images'>
-                            {ev.firstImageUrl !== null ? (
-                                <div></div>
-                            ) : (
-                                <img
-                                    src={ev.firstImageUrl}
-                                    alt='Event second frame'
-                                />
-                            )}
+                            <img
+                                src={ev.firstImageUrl}
+                                alt='Event second frame'
+                            />
 
                             <img
                                 src={ev.firstImageUrl}
@@ -53,15 +44,16 @@ export default function EventDetail() {
                                 src={ev.firstImageUrl}
                                 alt='Event fourth frame'
                             />
-                        <div className='event__images' type='image/jpeg'>
-                            <img src={ev.secondImageUrl} alt='' />
-                            <img src={ev.thirdImageUrl} alt='' />
-                            <img src={ev.fourthImageUrl} alt='' />
+                        </div>
+                        <div className='event__description'>
+                            <div className='event__descriptions'>
+                                <h5>&emsp; &emsp; {ev.firstDesc}</h5>
+                            </div>
                         </div>
                     </div>
                     <div className='event__last_part event__descriptions'>
-                        <h5>{ev.firstDesc}</h5>
-                        <h5>{ev.firstDesc}</h5>
+                        <h5>&emsp; &emsp; {ev.firstDesc}</h5>
+                        <h5> &emsp; &emsp;{ev.firstDesc}</h5>
                     </div>
                 </div>
             ))}

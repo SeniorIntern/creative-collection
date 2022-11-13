@@ -16,7 +16,7 @@ const db = mysql.createPool({
 
 app.get('/home/event', (req, res) => {
     const sqlGet =
-        'SELECT id, title, firstImageUrl FROM creative_business.events ORDER BY id DESC LIMIT 0,1'
+        'SELECT id, title, firstDesc, firstImageUrl FROM creative_business.events ORDER BY id DESC LIMIT 0,2'
     db.query(sqlGet, (error, result) => {
         res.send(result)
     })
@@ -24,7 +24,7 @@ app.get('/home/event', (req, res) => {
 
 app.get('/home/events', (req, res) => {
     const sqlGet =
-        'SELECT id, title, firstImageUrl FROM creative_business.events ORDER BY id DESC LIMIT 1,3'
+        'SELECT id, title, firstDesc,firstImageUrl FROM creative_business.events ORDER BY id DESC LIMIT 1,3'
     db.query(sqlGet, (error, result) => {
         res.send(result)
     })

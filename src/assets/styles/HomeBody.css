@@ -18,7 +18,7 @@
 }
 
 .container__uppercontainer__image > .homeBodyImg {
-    height: 14em;
+    height: 10em;
 }
 
 .homeBody > h4 {
@@ -30,7 +30,9 @@
     font-size: 0.7rem;
     margin-bottom: 0.2em;
 }
-
+.link {
+    text-decoration: none;
+}
 .left__homebody {
     flex: 0.7;
 }
@@ -54,13 +56,18 @@
     width: 100%;
     height: 2.5em;
 }
-.homebody__time {
+/* .homebody__time {
     color: gray;
     font-size: 0.37rem;
-}
+} */
 
 .homebodycontents {
-    font-size: 0.44em;
+    font-size: 0.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .left__homebody__lowerContainer__containers > .homeBodyImg {
     height: 4.7em;
@@ -74,7 +81,7 @@
     width: 100%;
 }
 .right__homebody__component {
-    margin: 0.3em 0;
+    margin: 0.2em 0;
 }
 
 .gradient__Container {

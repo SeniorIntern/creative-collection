@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/styles/HomeBody.css'
 import HeroContainer from './HeroContainer'
-
+import { NavLink } from 'react-router-dom'
 export default function HomeBody() {
     const [homeEvent, setHomeEvent] = useState([])
     useEffect(() => {
@@ -52,15 +52,17 @@ export default function HomeBody() {
 
                 <div className='right__homebody'>
                     <div className='right__homebody__container'>
+                        <h5>What's hot</h5>
                         {homeEvents.map((hes, id) => (
-                            <div className='right__homebody__component'>
-                                <img src={hes.firstImageUrl} alt='' />
-                                <p className='homebody__time'>2 hrs ago</p>
-                                <p className='homebodycontents'>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit.
-                                </p>
-                            </div>
+                            <NavLink className='link' to={`/event/${hes.id}`}>
+                                <div className='right__homebody__component'>
+                                    <img src={hes.firstImageUrl} alt='' />
+
+                                    <p className='homebodycontents'>
+                                        {hes.firstDesc}...
+                                    </p>
+                                </div>
+                            </NavLink>
                         ))}
                     </div>
                 </div>
