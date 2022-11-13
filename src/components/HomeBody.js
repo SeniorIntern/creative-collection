@@ -12,6 +12,15 @@ export default function HomeBody() {
         getHomeEvents()
     }, [])
 
+    const [homeEvents, setHomeEvents] = useState([])
+    useEffect(() => {
+        const getHomeEvents = async () => {
+            const hResponses = await fetch('http://localhost:5001/home/events')
+            setHomeEvents(await hResponses.json())
+        }
+        getHomeEvents()
+    }, [])
+
     return (
         <div className='homeBody'>
             <div className='homeBody__container'>
@@ -41,30 +50,20 @@ export default function HomeBody() {
                     </div>
                 </div>
 
-                {/* RIGHT COLUMN */}
-                {/*
                 <div className='right__homebody'>
                     <div className='right__homebody__container'>
-                        <div className='right__homebody__component'>
-                            <img src={event4} alt='' />
-                            <p className='homebody__time'>2 hrs ago</p>
-                            <p className='homebodycontents'>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit.
-                            </p>
-                        </div>
-
-                        <div className='right__homebody__component'>
-                            <img src={event5} alt='' />
-                            <p className='homebody__time'>2 hrs ago</p>
-                            <p className='homebodycontents'>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit.
-                            </p>
-                        </div>
+                        {homeEvents.map((hes, id) => (
+                            <div className='right__homebody__component'>
+                                <img src={hes.firstImageUrl} alt='' />
+                                <p className='homebody__time'>2 hrs ago</p>
+                                <p className='homebodycontents'>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                 */}
             </div>
         </div>
     )

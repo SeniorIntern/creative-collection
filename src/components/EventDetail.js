@@ -35,19 +35,10 @@ export default function EventDetail() {
                                 <h5>{ev.firstDesc}</h5>
                             </div>
                         </div>
-                        <div className='event__images'>
-                            <img
-                                src={ev.firstImageUrl}
-                                alt='Event second frame'
-                            />
-                            <img
-                                src={ev.firstImageUrl}
-                                alt='Event third frame'
-                            />
-                            <img
-                                src={ev.firstImageUrl}
-                                alt='Event fourth frame'
-                            />
+                        <div className='event__images' type='image/jpeg'>
+                            <img src={ev.secondImageUrl} alt='' />
+                            <img src={ev.thirdImageUrl} alt='' />
+                            <img src={ev.fourthImageUrl} alt='' />
                         </div>
                     </div>
                     <div className='event__last_part event__descriptions'>
