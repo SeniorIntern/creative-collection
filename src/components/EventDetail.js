@@ -36,10 +36,15 @@ export default function EventDetail() {
                             </div>
                         </div>
                         <div className='event__images'>
-                            <img
-                                src={ev.firstImageUrl}
-                                alt='Event second frame'
-                            />
+                            {ev.firstImageUrl !== null ? (
+                                <div></div>
+                            ) : (
+                                <img
+                                    src={ev.firstImageUrl}
+                                    alt='Event second frame'
+                                />
+                            )}
+
                             <img
                                 src={ev.firstImageUrl}
                                 alt='Event third frame'
