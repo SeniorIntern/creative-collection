@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/styles/HomeBody.css'
-import event1 from '../assets/images/Event1.jpg'
-import event2 from '../assets/images/Event2.jpg'
-import event3 from '../assets/images/Event3.jpg'
-import event4 from '../assets/images/Event4.jpg'
-import event5 from '../assets/images/Event5.jpg'
 import HeroContainer from './HeroContainer'
 
 export default function HomeBody() {
@@ -37,7 +32,7 @@ export default function HomeBody() {
                             >
                                 <img
                                     className='homeBodyImg'
-                                    src={he.imageUrl}
+                                    src={he.firstImageUrl}
                                     alt=''
                                 />
                                 <div className='bottom__left'>{he.title}</div>

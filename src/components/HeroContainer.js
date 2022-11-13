@@ -1,6 +1,7 @@
 import React from 'react'
 import '../assets/styles/HeroContainer.css'
 import teamwork from '../assets/images/teamwork.png'
+import { NavLink } from 'react-router-dom'
 
 export default function HeroContainer() {
     return (
@@ -20,8 +21,28 @@ export default function HeroContainer() {
                     </p>
                     {/* Buttons */}
                     <div className='buttons'>
-                        <p>View Events</p>
-                        <p>Check Products</p>
+                        <p>
+                            <NavLink
+                                to='/events'
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'white',
+                                }}
+                            >
+                                View Events
+                            </NavLink>
+                        </p>
+                        <p>
+                            <NavLink
+                                to='/'
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'white',
+                                }}
+                            >
+                                Check Products
+                            </NavLink>
+                        </p>
                     </div>
                 </div>
                 <div className='hero__colTwo'>

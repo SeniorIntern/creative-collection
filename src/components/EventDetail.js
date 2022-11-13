@@ -14,25 +14,30 @@ export default function EventDetail() {
             setEvent(await response.json())
         }
         getEvents()
-    }, [])
+    })
 
     return (
         <div className='eventDetail'>
-            {console.table(event)}
-            <div className=''>This is Event Detail Page</div>
             {event.map((ev) => (
-                <div className='event__contents' key={ev.id}>
-                    <div className='event__detail'>
+                <div className='event__detail' key={ev.id}>
+                    <div className='event__title'>
                         <h1>{ev.title}</h1>
                     </div>
-                    <div className='eventImages'>
-                        <div className='event__firstImage'>
-                            <img src={ev.firstImageUrl} />
-                        </div>
+                    <div className='event__image'>
+                        <img src={ev.firstImageUrl} alt='Event first frame' />
+                    </div>
+                    <div className='event__images'>
+                        <img src={ev.secondImagerl} alt='Event second frame' />
+                        <img src={ev.thirdImageUrl} alt='Event third frame' />
+                        <img src={ev.fourthImageUrl} alt='Event fourth frame' />
                     </div>
                     <div className='event__description'>
-                        <div className='event__firstDescription'>
-                            {ev.firstDesc}
+                        <div className='event__desc'>
+                            <h5>{ev.firstDesc}</h5>
+                        </div>
+                        <div className='event__descriptions'>
+                            <h5>{ev.secondDesc}</h5>
+                            <h5>{ev.thirdDesc}</h5>
                         </div>
                     </div>
                 </div>
