@@ -10,13 +10,21 @@ app.use(express.urlencoded({ extended: true }))
 const db = mysql.createPool({
     user: 'root',
     host: 'localhost',
-    password: 'DZ6VF3iFYz59#HMo',
+    password: '123Rabbit',
     database: 'creative_business',
 })
 
-// default order is asc
+app.get('/home/event', (req, res) => {
+    const sqlGet =
+        'SELECT id, title, imageUrl FROM creative_business.events ORDER BY id DESC LIMIT 0,3'
+    db.query(sqlGet, (error, result) => {
+        res.send(result)
+    })
+})
+
+// list event based on recently added
 app.get('/event/get', (req, res) => {
-    const sqlGet = 'SELECT * FROM creative_business.events ORDER BY id'
+    const sqlGet = 'SELECT * FROM creative_business.events ORDER BY id DESC;'
     db.query(sqlGet, (error, result) => {
         res.send(result)
     })
