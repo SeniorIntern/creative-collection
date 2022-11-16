@@ -50,6 +50,25 @@ app.get('/news/get/:id', (req, res) => {
     })
 })
 
+app.get('/events/get', (req, res) => {
+    const sqlGet =
+        'SELECT id, title, ImgOne FROM creative_business.events ORDER BY id DESC;'
+    db.query(sqlGet, (error, result) => {
+        res.send(result)
+    })
+})
+
+app.get('/events/get/:id', (req, res) => {
+    const { id } = req.params
+    const sqlGet = 'SELECT * FROM creative_business.events WHERE id=?'
+    db.query(sqlGet, id, (error, result) => {
+        if (error) {
+            console.log(error)
+        }
+        res.send(result)
+    })
+})
+
 app.listen(5001, (err) => {
     if (!err) {
         console.log('event_provider server is running on port 5001')

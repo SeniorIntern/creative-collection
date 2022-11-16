@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# external resources
+/external_resources
 # testing
 /coverage
 

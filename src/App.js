@@ -10,7 +10,8 @@ import NotFound from './components/NotFound'
 import Products from './components/Products'
 import NewsDetail from './components/NewsDetail'
 import NewsList from './components/NewsList'
-import EventList from './EventList'
+import EventList from './components/EventList'
+import EventDetail from './components/EventDetail'
 
 export default function App() {
     return (
@@ -23,8 +24,9 @@ export default function App() {
                         <Route path='/services' element={<Products />} />
                         <Route path='/about' element={<About />} />
                         <Route path='/news' element={<NewsList />} />
-                        <Route path='/events' element={<EventList />} />
                         <Route path='/news/:id' element={<NewsDetail />} />
+                        <Route path='/events' element={<EventList />} />
+                        <Route path='/events/:id' element={<EventDetail />} />
                         <Route path='/contact' element={<Contact />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
