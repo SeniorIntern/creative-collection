@@ -2,23 +2,24 @@ import React, { useEffect, useState } from 'react'
 import '../assets/styles/HomeBody.css'
 import HeroContainer from './HeroContainer'
 import { NavLink } from 'react-router-dom'
+
 export default function HomeBody() {
-    const [homeEvent, setHomeEvent] = useState([])
+    const [homeNews, setHomeNews] = useState([])
     useEffect(() => {
-        const getHomeEvents = async () => {
-            const hResponse = await fetch('http://localhost:5001/home/event')
-            setHomeEvent(await hResponse.json())
+        const getHomeNews = async () => {
+            const hResponse = await fetch('http://localhost:5001/home/news')
+            setHomeNews(await hResponse.json())
         }
-        getHomeEvents()
+        getHomeNews()
     }, [])
 
-    const [homeEvents, setHomeEvents] = useState([])
+    const [homeEventList, setHomeEventList] = useState([])
     useEffect(() => {
-        const getHomeEvents = async () => {
+        const getHomeEventList = async () => {
             const hResponses = await fetch('http://localhost:5001/home/events')
-            setHomeEvents(await hResponses.json())
+            setHomeEventList(await hResponses.json())
         }
-        getHomeEvents()
+        getHomeEventList()
     }, [])
 
     return (
@@ -27,14 +28,14 @@ export default function HomeBody() {
                 <HeroContainer />
                 <div className='gradient__Container' />
             </div>
-            <h4>Latest Events</h4>
-            {console.table(homeEvent)}
+            <h4>Upcoming Events News</h4>
+            {console.table(homeNews)}
 
             <div className='container'>
                 {/* LEFT COLUMN */}
                 <div className='left__homebody'>
                     <div className='left__homebody__upperContainer'>
-                        {homeEvent.map((he, id) => (
+                        {homeNews.map((he, id) => (
                             <div
                                 className='container__uppercontainer__image'
                                 key={id}
@@ -44,7 +45,11 @@ export default function HomeBody() {
                                     src={he.firstImageUrl}
                                     alt=''
                                 />
-                                <div className='bottom__left'>{he.title}</div>
+                                <NavLink className='link' to={`/news/${he.id}`}>
+                                    <div className='bottom__left'>
+                                        {he.title}
+                                    </div>
+                                </NavLink>
                             </div>
                         ))}
                     </div>
@@ -52,14 +57,14 @@ export default function HomeBody() {
 
                 <div className='right__homebody'>
                     <div className='right__homebody__container'>
-                        <h5>What's hot</h5>
-                        {homeEvents.map((hes, id) => (
-                            <NavLink className='link' to={`/event/${hes.id}`}>
+                        <h5>Recent Events</h5>
+                        {homeEventList.map((hes, id) => (
+                            <NavLink className='link' to={`/events/${hes.id}`}>
                                 <div className='right__homebody__component'>
-                                    <img src={hes.firstImageUrl} alt='' />
+                                    <img src={hes.ImgOne} alt='' />
 
                                     <p className='homebodycontents'>
-                                        {hes.firstDesc}...
+                                        {hes.title}
                                     </p>
                                 </div>
                             </NavLink>

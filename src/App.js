@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './assets/styles/App.css'
 import About from './components/About'
 import Contact from './components/Contact'
-import EventDetail from './components/EventDetail'
-import Events from './components/Events'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import HomeBody from './components/HomeBody'
 import NotFound from './components/NotFound'
 import Products from './components/Products'
+import NewsDetail from './components/NewsDetail'
+import NewsList from './components/NewsList'
+import EventList from './EventList'
 
 export default function App() {
     return (
@@ -19,10 +20,11 @@ export default function App() {
                 <div className='app__container'>
                     <Routes>
                         <Route path='/' element={<HomeBody />} />
-                        <Route path='/products' element={<Products />} />
+                        <Route path='/services' element={<Products />} />
                         <Route path='/about' element={<About />} />
-                        <Route path='/events' element={<Events />} />
-                        <Route path='/event/:id' element={<EventDetail />} />
+                        <Route path='/news' element={<NewsList />} />
+                        <Route path='/events' element={<EventList />} />
+                        <Route path='/news/:id' element={<NewsDetail />} />
                         <Route path='/contact' element={<Contact />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>

@@ -30,9 +30,12 @@
     font-size: 0.7rem;
     margin-bottom: 0.2em;
 }
+
 .link {
     text-decoration: none;
+    color: #aae071;
 }
+
 .left__homebody {
     flex: 0.7;
 }
@@ -69,6 +72,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+
 .left__homebody__lowerContainer__containers > .homeBodyImg {
     height: 4.7em;
 }

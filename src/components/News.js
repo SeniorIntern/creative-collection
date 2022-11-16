@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import '../assets/styles/Event.css'
+import '../assets/styles/News.css'
 
-export default function Event({ id, title, firstImageUrl }) {
+export default function News({ id, title, firstImageUrl }) {
     const [visible, setVisible] = useState(false)
 
     function renderBtn() {
@@ -11,7 +11,7 @@ export default function Event({ id, title, firstImageUrl }) {
 
     return (
         <div
-            className='event'
+            className='news'
             onClick={() => {
                 renderBtn()
             }}
@@ -20,9 +20,9 @@ export default function Event({ id, title, firstImageUrl }) {
                 <img src={firstImageUrl} alt='Avatar' className='image' />
                 <div className='overlay'>
                     <div className='text'>{title}</div>
-                    <NavLink to={`/event/${id}`}>
+                    <NavLink to={`/news/${id}`}>
                         {visible && (
-                            <button className='event__readMore'>
+                            <button className='news__readMore'>
                                 Read More
                             </button>
                         )}

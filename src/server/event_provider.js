@@ -14,9 +14,9 @@ const db = mysql.createPool({
     database: 'creative_business',
 })
 
-app.get('/home/event', (req, res) => {
+app.get('/home/news', (req, res) => {
     const sqlGet =
-        'SELECT id, title, firstDesc, firstImageUrl FROM creative_business.events ORDER BY id DESC LIMIT 0,2'
+        'SELECT id, title, firstDesc, firstImageUrl FROM creative_business.news ORDER BY id DESC LIMIT 0,3'
     db.query(sqlGet, (error, result) => {
         res.send(result)
     })
@@ -24,24 +24,24 @@ app.get('/home/event', (req, res) => {
 
 app.get('/home/events', (req, res) => {
     const sqlGet =
-        'SELECT id, title, firstDesc,firstImageUrl FROM creative_business.events ORDER BY id DESC LIMIT 1,3'
+        'SELECT id, title, ImgOne FROM creative_business.events ORDER BY id DESC LIMIT 0,4'
     db.query(sqlGet, (error, result) => {
         res.send(result)
     })
 })
 
 // list event based on recently added
-app.get('/event/get', (req, res) => {
+app.get('/news/get', (req, res) => {
     const sqlGet =
-        'SELECT id, title, firstImageUrl FROM creative_business.events ORDER BY id DESC;'
+        'SELECT id, title, firstImageUrl FROM creative_business.news ORDER BY id DESC;'
     db.query(sqlGet, (error, result) => {
         res.send(result)
     })
 })
 
-app.get('/event/get/:id', (req, res) => {
+app.get('/news/get/:id', (req, res) => {
     const { id } = req.params
-    const sqlGet = 'SELECT * FROM creative_business.events WHERE id=?'
+    const sqlGet = 'SELECT * FROM creative_business.news WHERE id=?'
     db.query(sqlGet, id, (error, result) => {
         if (error) {
             console.log(error)
