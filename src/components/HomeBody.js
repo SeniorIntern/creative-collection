@@ -36,21 +36,22 @@ export default function HomeBody() {
                 <div className='left__homebody'>
                     <div className='left__homebody__upperContainer'>
                         {homeNews.map((he, id) => (
-                            <div
-                                className='container__uppercontainer__image'
-                                key={id}
-                            >
-                                <img
-                                    className='homeBodyImg'
-                                    src={he.firstImageUrl}
-                                    alt=''
-                                />
-                                <NavLink className='link' to={`/news/${he.id}`}>
+                            <NavLink className='link' to={`/news/${he.id}`}>
+                                <div
+                                    className='container__uppercontainer__image'
+                                    key={id}
+                                >
+                                    <img
+                                        className='homeBodyImg'
+                                        src={he.firstImageUrl}
+                                        alt=''
+                                    />
+
                                     <div className='bottom__left'>
                                         {he.title}
                                     </div>
-                                </NavLink>
-                            </div>
+                                </div>
+                            </NavLink>
                         ))}
                     </div>
                 </div>
