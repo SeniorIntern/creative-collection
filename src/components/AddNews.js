@@ -96,116 +96,121 @@ export default function AddNews() {
                 pauseOnHover
                 theme='dark'
             />
+            <div className='addNews_Container'>
+                <h4>Add News</h4>
+                <form
+                    className='formToAddNews'
+                    style={{
+                        padding: '.2em',
+                        alignContent: 'center',
+                        textAlign: 'center',
+                    }}
+                    onSubmit={handleSubmit}
+                >
+                    <input
+                        type='text'
+                        name='title'
+                        id='title'
+                        placeholder='News Title'
+                        e={title}
+                        onChange={handleInputChange}
+                        required
+                        minLength={4}
+                        maxLength={25}
+                        value={title || ''}
+                    />
 
-            <form
-                style={{
-                    padding: '.2em',
-                    alignContent: 'center',
-                    textAlign: 'center',
-                }}
-                onSubmit={handleSubmit}
-            >
-                <input
-                    type='text'
-                    name='title'
-                    id='title'
-                    placeholder='News Title'
-                    e={title}
-                    onChange={handleInputChange}
-                    required
-                    minLength={4}
-                    maxLength={25}
-                    value={title || ''}
-                />
+                    <input
+                        type='text'
+                        name='firstImageUrl'
+                        id='firstImageUrl'
+                        placeholder='First Image Url'
+                        e={firstImageUrl}
+                        onChange={handleInputChange}
+                        required
+                        minLength={4}
+                        maxLength={40}
+                        value={firstImageUrl || ''}
+                    />
 
-                <input
-                    type='text'
-                    name='firstImageUrl'
-                    id='firstImageUrl'
-                    placeholder='First Image Url'
-                    e={firstImageUrl}
-                    onChange={handleInputChange}
-                    required
-                    minLength={4}
-                    maxLength={40}
-                    value={firstImageUrl || ''}
-                />
+                    <input
+                        type='text'
+                        name='secondImageUrl'
+                        id='secondImageUrl'
+                        placeholder='Second Image Url'
+                        e={secondImageUrl}
+                        onChange={handleInputChange}
+                        minLength={4}
+                        maxLength={40}
+                        value={secondImageUrl || ''}
+                    />
 
-                <input
-                    type='text'
-                    name='secondImageUrl'
-                    id='secondImageUrl'
-                    placeholder='Second Image Url'
-                    e={secondImageUrl}
-                    onChange={handleInputChange}
-                    minLength={4}
-                    maxLength={40}
-                    value={secondImageUrl || ''}
-                />
+                    <input
+                        type='text'
+                        name='thirdImageUrl'
+                        id='thirdImageUrl'
+                        placeholder='Third Image Url'
+                        e={thirdImageUrl}
+                        onChange={handleInputChange}
+                        minLength={4}
+                        maxLength={40}
+                        value={thirdImageUrl || ''}
+                    />
 
-                <input
-                    type='text'
-                    name='thirdImageUrl'
-                    id='thirdImageUrl'
-                    placeholder='Third Image Url'
-                    e={thirdImageUrl}
-                    onChange={handleInputChange}
-                    minLength={4}
-                    maxLength={40}
-                    value={thirdImageUrl || ''}
-                />
+                    <input
+                        type='text'
+                        name='FourthImageUrl'
+                        id='FourthImageUrl'
+                        placeholder='Fourth Image Url'
+                        e={FourthImageUrl}
+                        onChange={handleInputChange}
+                        minLength={4}
+                        maxLength={25}
+                        value={FourthImageUrl || ''}
+                    />
 
-                <input
-                    type='text'
-                    name='FourthImageUrl'
-                    id='FourthImageUrl'
-                    placeholder='Fourth Image Url'
-                    e={FourthImageUrl}
-                    onChange={handleInputChange}
-                    minLength={4}
-                    maxLength={25}
-                    value={FourthImageUrl || ''}
-                />
+                    <textarea
+                        name='firstDesc'
+                        id='firstDesc'
+                        placeholder='First Description'
+                        cols='30'
+                        rows='8'
+                        e={firstDesc}
+                        onChange={handleInputChange}
+                        required
+                        minLength={20}
+                        maxLength={220}
+                        value={firstDesc || ''}
+                    ></textarea>
+                    <textarea
+                        name='secondDesc'
+                        id='secondDesc'
+                        placeholder='Second Description'
+                        cols='30'
+                        rows='8'
+                        e={secondDesc}
+                        onChange={handleInputChange}
+                        minLength={20}
+                        maxLength={220}
+                        value={secondDesc || ''}
+                    />
 
-                <input
-                    type='text'
-                    name='firstDesc'
-                    id='firstDesc'
-                    placeholder='First Description'
-                    e={firstDesc}
-                    onChange={handleInputChange}
-                    required
-                    minLength={20}
-                    maxLength={220}
-                    value={firstDesc || ''}
-                />
+                    <textarea
+                        name='thirdDesc'
+                        id='thirdDesc'
+                        placeholder='Third Description'
+                        cols='30'
+                        rows='8'
+                        e={thirdDesc}
+                        onChange={handleInputChange}
+                        minLength={20}
+                        maxLength={220}
+                        value={thirdDesc || ''}
+                    />
 
-                <input
-                    type='text'
-                    name='secondDesc'
-                    id='secondDesc'
-                    placeholder='Second Description'
-                    e={secondDesc}
-                    onChange={handleInputChange}
-                    minLength={20}
-                    maxLength={220}
-                    value={secondDesc || ''}
-                />
-
-                <input
-                    type='text'
-                    name='thirdDesc'
-                    id='thirdDesc'
-                    placeholder='Third Description'
-                    e={thirdDesc}
-                    onChange={handleInputChange}
-                    minLength={20}
-                    maxLength={220}
-                    value={thirdDesc || ''}
-                />
-
-                <input type='submit' value='save' />
-            </form>
+                    <input type='submit' value='save' />
+                </form>
+            </div>
         </div>
     )
 }
