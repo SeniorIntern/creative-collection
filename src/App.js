@@ -12,6 +12,8 @@ import NewsDetail from './components/NewsDetail'
 import NewsList from './components/NewsList'
 import EventList from './components/EventList'
 import EventDetail from './components/EventDetail'
+import AddNews from './components/AddNews'
+import AddEvent from './components/AddEvent'
 
 export default function App() {
     return (
@@ -25,8 +27,10 @@ export default function App() {
                         <Route path='/about' element={<About />} />
                         <Route path='/news' element={<NewsList />} />
                         <Route path='/news/:id' element={<NewsDetail />} />
+                        <Route path='/addNews' element={<AddNews />} />
                         <Route path='/events' element={<EventList />} />
                         <Route path='/events/:id' element={<EventDetail />} />
+                        <Route path='/addEvent' element={<AddEvent />} />
                         <Route path='/contact' element={<Contact />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>

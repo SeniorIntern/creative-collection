@@ -1,4 +1,5 @@
 import React from 'react'
+import '../assets/styles/AddEvent.css'
 
 export default function AddEvent() {
     return (

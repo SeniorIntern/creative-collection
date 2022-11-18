@@ -69,6 +69,41 @@ app.get('/events/get/:id', (req, res) => {
     })
 })
 
+app.post('/news/post', (req, res) => {
+    const {
+        title,
+        firstImageUrl,
+        secondImageUrl,
+        thirdImageUrl,
+        FourthImageUrl,
+        firstDesc,
+        secondDesc,
+        thirdDesc,
+    } = req.body
+
+    const sqlInsert =
+        'Insert Into creative_business.news (title,firstImageUrl,secondImageUrl,thirdImageUrl,FourthImageUrl,firstDesc,secondDesc,thirdDesc) values(?, ?, ?, ?, ?, ?, ?, ?)'
+
+    db.query(
+        sqlInsert,
+        [
+            title,
+            firstImageUrl,
+            secondImageUrl,
+            thirdImageUrl,
+            FourthImageUrl,
+            firstDesc,
+            secondDesc,
+            thirdDesc,
+        ],
+        (error, result) => {
+            if (error) {
+                console.log(error)
+            }
+        }
+    )
+})
+
 app.listen(5001, (err) => {
     if (!err) {
         console.log('event_provider server is running on port 5001')
