@@ -68,9 +68,11 @@ export default function Header() {
                 </div>
 
                 <div className='content__right flex-need'>
-                    <div className='user__action '>
-                        <button>Login</button>
-                    </div>
+                    <NavLink to='/dashboard'>
+                        <div className='user__action '>
+                            <button>Login</button>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         </div>

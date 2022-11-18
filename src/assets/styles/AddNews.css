@@ -7,7 +7,7 @@ textarea:focus {
     outline-color: green;
 }
 input[type='submit'] {
-    background-color: orangered;
+    background-color: green;
     color: #f5f5f5;
     font-size: 0.5rem;
     cursor: pointer;
@@ -40,5 +40,5 @@ textarea {
     align-items: center;
 }
 .addNews_Container > h4 {
-    color: orangered;
+    color: green;
 }

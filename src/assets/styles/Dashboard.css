@@ -1,0 +1,50 @@
+.dashboard {
+    margin-top: 1em;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 1em;
+    width: fit-content;
+    margin: auto;
+}
+
+.News__options,
+.Event__options {
+    display: flex;
+}
+
+.news__option,
+.event__option {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 0.4em;
+    margin: 1em;
+    background: rgb(238, 174, 202);
+    background: -moz-radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+    );
+    background: -webkit-radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+    );
+    background: radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+}
+
+.news__option > h1 {
+    text-decoration: none;
+    color: white;
+    margin: 1.4em;
+}
+
+.event__option > h1 {
+    text-decoration: none;
+    color: white;
+    margin: 1.4em;
+}

@@ -14,6 +14,7 @@ import EventList from './components/EventList'
 import EventDetail from './components/EventDetail'
 import AddNews from './components/AddNews'
 import AddEvent from './components/AddEvent'
+import Dashboard from './components/Dashboard'
 
 export default function App() {
     return (
@@ -32,6 +33,7 @@ export default function App() {
                         <Route path='/events/:id' element={<EventDetail />} />
                         <Route path='/addEvent' element={<AddEvent />} />
                         <Route path='/contact' element={<Contact />} />
+                        <Route path='/dashboard' element={<Dashboard />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </div>
