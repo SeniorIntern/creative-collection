@@ -50,25 +50,6 @@ app.get('/news/get/:id', (req, res) => {
     })
 })
 
-app.get('/events/get', (req, res) => {
-    const sqlGet =
-        'SELECT id, title, ImgOne FROM creative_business.events ORDER BY id DESC;'
-    db.query(sqlGet, (error, result) => {
-        res.send(result)
-    })
-})
-
-app.get('/events/get/:id', (req, res) => {
-    const { id } = req.params
-    const sqlGet = 'SELECT * FROM creative_business.events WHERE id=?'
-    db.query(sqlGet, id, (error, result) => {
-        if (error) {
-            console.log(error)
-        }
-        res.send(result)
-    })
-})
-
 app.post('/news/post', (req, res) => {
     const {
         title,
@@ -102,6 +83,71 @@ app.post('/news/post', (req, res) => {
             }
         }
     )
+})
+
+app.delete('/news/remove/:id', (req, res) => {
+    const { id } = req.params
+    const sqlRemove = 'DELETE FROM creative_business.news WHERE id = ?'
+    db.query(sqlRemove, id, (error, result) => {
+        if (error) {
+            console.log(error)
+        }
+    })
+})
+
+app.put('/news/put/:id', (req, res) => {
+    const { id } = req.params
+    const {
+        title,
+        firstImageUrl,
+        secondImageUrl,
+        thirdImageUrl,
+        FourthImageUrl,
+        firstDesc,
+        secondDesc,
+        thirdDesc,
+    } = req.body
+    const sqlUpdate =
+        'UPDATE creative_business.news SET title=?,firstImageUrl=?,secondImageUrl=?,thirdImageUrl=?,FourthImageUrl=?,firstDesc=?,secondDesc=?,thirdDesc=? WHERE id=?'
+    db.query(
+        sqlUpdate,
+        [
+            title,
+            firstImageUrl,
+            secondImageUrl,
+            thirdImageUrl,
+            FourthImageUrl,
+            firstDesc,
+            secondDesc,
+            thirdDesc,
+            id,
+        ],
+        (error, result) => {
+            if (error) {
+                console.log(error)
+            }
+            res.send(result)
+        }
+    )
+})
+
+app.get('/events/get', (req, res) => {
+    const sqlGet =
+        'SELECT id, title, ImgOne FROM creative_business.events ORDER BY id DESC;'
+    db.query(sqlGet, (error, result) => {
+        res.send(result)
+    })
+})
+
+app.get('/events/get/:id', (req, res) => {
+    const { id } = req.params
+    const sqlGet = 'SELECT * FROM creative_business.events WHERE id=?'
+    db.query(sqlGet, id, (error, result) => {
+        if (error) {
+            console.log(error)
+        }
+        res.send(result)
+    })
 })
 
 app.listen(5001, (err) => {

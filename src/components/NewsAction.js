@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-import '../assets/styles/AddNews.css'
 import { toast, ToastContainer } from 'react-toastify'
+import { useParams } from 'react-router'
 import 'react-toastify/dist/ReactToastify.css'
+import '../assets/styles/NewsAction.css'
 
 const initialState = {
     title: '',
@@ -16,7 +17,7 @@ const initialState = {
     thirdDesc: '',
 }
 
-export default function AddNews() {
+export default function NewsAction() {
     const [state, setState] = useState(initialState)
 
     // destructuring from state
@@ -31,8 +32,20 @@ export default function AddNews() {
         thirdDesc,
     } = state
 
+    // for updating data by id
+    const { id } = useParams()
+
+    // only after getting id
+    useEffect(() => {
+        axios
+            .get(`http://localhost:5001/news/${id}`)
+            .then((resp) => setState({ ...resp.data[0] }))
+    }, [id])
+
     const handleSubmit = (e) => {
         // prevent default behaviour of browser
+        e.preventDefault()
+
         if (
             !title ||
             !firstImageUrl ||
@@ -44,40 +57,40 @@ export default function AddNews() {
             !thirdDesc
         ) {
             toast.error('Please provide values')
-        }
-        e.preventDefault()
-        axios
-            .post('http://localhost:5001/news/post', {
-                title,
-                firstImageUrl,
-                secondImageUrl,
-                thirdImageUrl,
-                FourthImageUrl,
-                firstDesc,
-                secondDesc,
-                thirdDesc,
-            })
-            .then(() => {
-                setState({
-                    title: '',
-                    firstImageUrl: '',
-                    secondImageUrl: '',
-                    thirdImageUrl: '',
-                    FourthImageUrl: '',
-                    firstDesc: '',
-                    secondDesc: '',
-                    thirdDesc: '',
+        } else {
+            axios
+                .put(`http://localhost:5001/news/put/${id}`, {
+                    title,
+                    firstImageUrl,
+                    secondImageUrl,
+                    thirdImageUrl,
+                    FourthImageUrl,
+                    firstDesc,
+                    secondDesc,
+                    thirdDesc,
                 })
+                // clear input fields after use submits the value
+                .then(() => {
+                    setState({
+                        title: '',
+                        firstImageUrl: '',
+                        secondImageUrl: '',
+                        thirdImageUrl: '',
+                        FourthImageUrl: '',
+                        firstDesc: '',
+                        secondDesc: '',
+                        thirdDesc: '',
+                    })
+                })
+                .catch((err) => toast.error(err.response.data))
+            toast.success('News Updated Sucessfully', {
+                position: 'top-center',
             })
-            .catch((err) => toast.error(err.response.data))
-        // .catch((err) => alert(err.response.data));
-        toast.success('News Added Sucessfully', {
-            position: 'top-center',
-        })
+        }
     }
 
     const handleInputChange = (e) => {
-        // destruct name and value
+        // destructure name and value
         const { name, value } = e.target
         setState({ ...state, [name]: value })
     }
@@ -96,12 +109,12 @@ export default function AddNews() {
                 pauseOnHover
                 theme='dark'
             />
-            <div className='addNews_Container'>
-                <h4>Add News</h4>
+            <div className='addNews__Container'>
+                <h4>Fill Event News' New Details</h4>
                 <form
-                    className='formToAddNews'
+                    className='addNews__form'
                     style={{
-                        padding: '.2em',
+                        padding: '0.2em',
                         alignContent: 'center',
                         textAlign: 'center',
                     }}
@@ -112,7 +125,6 @@ export default function AddNews() {
                         name='title'
                         id='title'
                         placeholder='News Title'
-                        e={title}
                         onChange={handleInputChange}
                         required
                         minLength={4}
@@ -125,7 +137,6 @@ export default function AddNews() {
                         name='firstImageUrl'
                         id='firstImageUrl'
                         placeholder='First Image Url'
-                        e={firstImageUrl}
                         onChange={handleInputChange}
                         required
                         minLength={4}
@@ -138,7 +149,6 @@ export default function AddNews() {
                         name='secondImageUrl'
                         id='secondImageUrl'
                         placeholder='Second Image Url'
-                        e={secondImageUrl}
                         onChange={handleInputChange}
                         minLength={4}
                         maxLength={40}
@@ -150,7 +160,6 @@ export default function AddNews() {
                         name='thirdImageUrl'
                         id='thirdImageUrl'
                         placeholder='Third Image Url'
-                        e={thirdImageUrl}
                         onChange={handleInputChange}
                         minLength={4}
                         maxLength={40}
@@ -162,7 +171,6 @@ export default function AddNews() {
                         name='FourthImageUrl'
                         id='FourthImageUrl'
                         placeholder='Fourth Image Url'
-                        e={FourthImageUrl}
                         onChange={handleInputChange}
                         minLength={4}
                         maxLength={25}
@@ -175,20 +183,19 @@ export default function AddNews() {
                         placeholder='First Description'
                         cols='30'
                         rows='8'
-                        e={firstDesc}
                         onChange={handleInputChange}
                         required
                         minLength={20}
                         maxLength={220}
                         value={firstDesc || ''}
                     ></textarea>
+
                     <textarea
                         name='secondDesc'
                         id='secondDesc'
                         placeholder='Second Description'
                         cols='30'
                         rows='8'
-                        e={secondDesc}
                         onChange={handleInputChange}
                         minLength={20}
                         maxLength={220}
@@ -201,14 +208,12 @@ export default function AddNews() {
                         placeholder='Third Description'
                         cols='30'
                         rows='8'
-                        e={thirdDesc}
                         onChange={handleInputChange}
                         minLength={20}
                         maxLength={220}
                         value={thirdDesc || ''}
                     />
-
-                    <input type='submit' value='save' />
+                    <input type='submit' value='UPDATE' />
                 </form>
             </div>
         </div>

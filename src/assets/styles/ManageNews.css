@@ -1,0 +1,8 @@
+.news__readMore {
+    display: flex;
+}
+
+.news__action {
+    margin: 0 1em;
+    cursor: pointer;
+}
