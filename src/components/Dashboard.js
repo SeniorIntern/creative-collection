@@ -11,9 +11,9 @@ function Dashboard() {
                         <h1>Manage News</h1>
                     </button>
                 </Link>
-                <Link to='/manageNews'>
+                <Link to='/addNews'>
                     <button className='news__option'>
-                        <h1>Manage Events</h1>
+                        <h1>Add News</h1>
                     </button>
                 </Link>
             </div>
