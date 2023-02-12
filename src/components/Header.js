@@ -67,13 +67,13 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div className='content__right flex-need'>
+                {/* <div className='content__right flex-need'>
                     <NavLink to='/dashboard'>
                         <div className='user__action '>
                             <button>Login</button>
                         </div>
                     </NavLink>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -150,7 +150,8 @@ app.get('/events/get/:id', (req, res) => {
     })
 })
 
-app.listen(5001, (err) => {
+const port = process.env.PORT || 5001
+app.listen(port, (err) => {
     if (!err) {
         console.log('event_provider server is running on port 5001')
     } else {

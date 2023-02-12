@@ -1,0 +1,38 @@
+.service {
+    margin-bottom: 2em;
+}
+
+.service>p {
+    font-size: 0.6rem;
+}
+
+.circle__img {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.1em;
+    height: 2.1em;
+    margin: 0.3em;
+}
+
+.circle__img>img {
+    height: 0.9em;
+    width: 0.9em;
+}
+
+.img1 {
+    background-color: #ec724b;
+}
+
+.img2 {
+    background-color: #ffa25e;
+}
+
+.img3 {
+    background-color: #d180d8;
+}
+
+.img4 {
+    background-color: #559dd0;
+}

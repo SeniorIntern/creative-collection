@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import '../assets/styles/About.css'
-import mate1 from '../assets/images/Demin.PNG'
-import ceoImage from '../assets/images/binod.png'
-import mate2 from '../assets/images/Subash.PNG'
-import mate3 from '../assets/images/Rajesh.PNG'
-import mate4 from '../assets/images/Bipin.PNG'
-import mate5 from '../assets/images/Shiva.PNG'
-import pen from '../assets/images/icons/pen.png'
-import send from '../assets/images/icons/send.png'
-import smartphone from '../assets/images/icons/smartphone.png'
-import video from '../assets/images/icons/video.png'
-import { height } from '@mui/system'
+import ceoImage from '../assets/images/ram-krishna.jpg'
+import manish from '../assets/images/manish-jeshwal.jpg'
+import rakesh from '../assets/images/rakesh-shrestha.jpg'
+import sagar from '../assets/images/sagar-acharya.jpg'
+import ram from '../assets/images/ram-krishna.jpg'
+
 
 export default function About() {
     const shortMessage =
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur dolLorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur doloribus accusantium blanditiis aliquam molestias, modi accusamus facilis amet quibusdam et ipsam provident sint quod eligendi fugiat, atque numquam quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo consequuntur doloribus accusantium blanditiis aliquam molestias, modi accusamus facilis amet quibusdam et ipsam provident sint quod eligendi fugiat, atque numquam quisquamoribus accusantium blanditiis '
+        'As I am working on the field for the event for the many years. Looking at the data’s event management might be the one of the backbone to enhance the tourism of Nepal as well as gandaki provenance. While inviting national companies to pokhara for their evet I always feel organizer prefer to work with a synchronized team rather then working with the many company then I come up with the concept of Creative business consultancy and thank you to all the companies and vendors who support me for the collaboration and joining hands for this new venture.'
 
     const [message, setMessage] = useState(shortMessage)
     const readmore = () => {
@@ -26,58 +21,22 @@ export default function About() {
         <div className='about__container'>
             <div className='about__work'>
                 <div className='work__intro'>
-                    <h4 className='shadow'>HOW WE WORK</h4>
                     <p>
-                        We offer a wide branch services, from the most simple to
-                        the most complex. Our Goal is to meet the needs of our
-                        customers by offering intelligent solutions.
+                        Pokhara is always a hub for the event. Annually pokhara
+                        host hundreds of the events from pageants to corporate
+                        events to sports event. But looking at the context we
+                        always miss the company that comes with the complete
+                        package of the event. Then the name burn creative
+                        business consultancy with the active participation of
+                        the major vendors of the event industry with the aim to
+                        give new definition to event management. Creative
+                        business consultancy is a collaboration of the event
+                        vendors and especially focused on quality results in the
+                        budget of the organizer. CBC is especially a team of
+                        experts from where client can ask for all the management
+                        of the event or they can give specific job task or they
+                        can hire the staff on the related field only.
                     </p>
-                </div>
-                <div className='work__scope'>
-                    <div className='col'>
-                        <div className='circle__img img1'>
-                            <img src={smartphone} alt='' />
-                        </div>
-                        <h5>Mobile Development </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.
-                        </p>
-                    </div>
-                    <div className='col'>
-                        <div className='circle__img img2'>
-                            <img src={pen} alt='' />
-                        </div>
-                        <h5>Graphics Design</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.
-                        </p>
-                    </div>
-                    <div className='col'>
-                        <div className='circle__img img3'>
-                            <img src={video} alt='' />
-                        </div>
-                        <h5>Motion Graphics</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.
-                        </p>
-                    </div>
-                    <div className='col'>
-                        <div className='circle__img img4'>
-                            <img src={send} alt='' />
-                        </div>
-                        <h5>Email Marketing</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.
-                        </p>
-                    </div>
                 </div>
             </div>
             <div className='about_ceo'>
@@ -88,7 +47,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className='ceo__container__right'>
-                        <h4>Mr. Balram Poudel</h4>
+                        <h4>Mr. Ramkrishna Poudel</h4>
                         <h5>CEO</h5>
 
                         <div className='ceo__readmore'>
@@ -106,48 +65,42 @@ export default function About() {
                     {/* SETUP PROPS LATER */}
                     <div className='member'>
                         <p>
-                            <img src={mate1} alt='Ram' className='team__pic' />
-                            <p>Demin Giri</p>
+                            <img
+                                src={manish}
+                                alt='Manish Jeshwal'
+                                className='team__pic'
+                            />
+                            <p>Manish Jeshwal</p>
                         </p>
                     </div>
                     <div className='member'>
                         <p>
                             <img
-                                src={mate2}
-                                alt='Subash'
+                                src={rakesh}
+                                alt='rakesh shrestha'
                                 className='team__pic'
                             />
-                            <p>Subash Gurung</p>
+                            <p>Rakesh Shrestha</p>
                         </p>
                     </div>
                     <div className='member'>
                         <p>
                             <img
-                                src={mate3}
-                                alt='Rajesh'
+                                src={sagar}
+                                alt='sagar-acharya'
                                 className='team__pic'
                             />
-                            <p>Rajesh Koirala</p>
+                            <p>Sagar Acharya</p>
                         </p>
                     </div>
                     <div className='member'>
                         <p>
                             <img
-                                src={mate4}
-                                alt='Bipin'
+                                src={ram}
+                                alt='ram-krishna'
                                 className='team__pic'
                             />
-                            <p>Bipin Thapa</p>
-                        </p>
-                    </div>
-                    <div className='member'>
-                        <p>
-                            <img
-                                src={mate5}
-                                alt='Shiva'
-                                className='team__pic'
-                            />
-                            <p>Shiva Khanal</p>
+                            <p>Ram Krishna</p>
                         </p>
                     </div>
                 </div>
