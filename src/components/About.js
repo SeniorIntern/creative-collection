@@ -6,7 +6,6 @@ import rakesh from '../assets/images/rakesh-shrestha.jpg'
 import sagar from '../assets/images/sagar-acharya.jpg'
 import ram from '../assets/images/ram-krishna.jpg'
 
-
 export default function About() {
     const shortMessage =
         'As I am working on the field for the event for the many years. Looking at the data’s event management might be the one of the backbone to enhance the tourism of Nepal as well as gandaki provenance. While inviting national companies to pokhara for their evet I always feel organizer prefer to work with a synchronized team rather then working with the many company then I come up with the concept of Creative business consultancy and thank you to all the companies and vendors who support me for the collaboration and joining hands for this new venture.'
@@ -60,7 +59,7 @@ export default function About() {
                 </div>
             </div>
             <div className='about_proudteammates'>
-                <h4>WE ARE PROUD</h4>
+                <h4>Team Of Creative Group</h4>
                 <div className='members'>
                     {/* SETUP PROPS LATER */}
                     <div className='member'>
@@ -71,6 +70,7 @@ export default function About() {
                                 className='team__pic'
                             />
                             <p>Manish Jeshwal</p>
+                            <p>"Creative Head"</p>
                         </p>
                     </div>
                     <div className='member'>
@@ -81,6 +81,7 @@ export default function About() {
                                 className='team__pic'
                             />
                             <p>Rakesh Shrestha</p>
+                            <p>"MD"</p>
                         </p>
                     </div>
                     <div className='member'>
@@ -91,6 +92,7 @@ export default function About() {
                                 className='team__pic'
                             />
                             <p>Sagar Acharya</p>
+                            <p>"Content Creator"</p>
                         </p>
                     </div>
                     <div className='member'>
@@ -100,7 +102,8 @@ export default function About() {
                                 alt='ram-krishna'
                                 className='team__pic'
                             />
-                            <p>Ram Krishna</p>
+                            <p>Ram Krishna Poudel</p>
+                            <p>"CEO"</p>
                         </p>
                     </div>
                 </div>

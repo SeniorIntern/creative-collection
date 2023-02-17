@@ -47,23 +47,38 @@
 .about_proudteammates>h4 {
     text-align: center;
     font-weight: bolder;
-    margin-top: 2.4em;
-    margin-bottom: 1.6em;
 }
 
-.team__pic {
-    width: 9.5em;
-    height: 9.5em;
-}
+
 
 .members {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
 }
 
 .member {
     margin-left: 0.1em;
+    width: 20%;
 }
+
+.team__pic {
+    width: 100%;
+    height: 14em;
+    border-radius: 1.4em;
+    z-index: 2;
+    /* set the z-index to be lower than the overlay */
+}
+
+.member::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* set the color and opacity of the overlay */
+    z-index: 1;
+    /* set the z-index to be higher than the image */
+}
+
 
 .member:hover {
     transform: scale(105%);
