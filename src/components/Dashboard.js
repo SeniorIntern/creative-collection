@@ -1,24 +1,24 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import '../assets/styles/Dashboard.css'
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import '../assets/styles/Dashboard.css';
 
 function Dashboard() {
-    return (
-        <div className='dashboard'>
-            <div className='News__options'>
-                <Link to='/manageNews'>
-                    <button className='news__option'>
-                        <h1>Manage News</h1>
-                    </button>
-                </Link>
-                <Link to='/addNews'>
-                    <button className='news__option'>
-                        <h1>Add News</h1>
-                    </button>
-                </Link>
-            </div>
-        </div>
-    )
+  return (
+    <div className="dashboard">
+      <div className="News__options">
+        <Link to="/manageNews">
+          <button className="news__option">
+            <h1>Manage News</h1>
+          </button>
+        </Link>
+        <Link to="/addNews">
+          <button className="news__option">
+            <h1>Add News</h1>
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
